@@ -1,16 +1,6 @@
 import { useState, FormEvent } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Mail, MapPin, Linkedin, Send } from "lucide-react";
-
-const interestOptions = [
-  "Logistics Optimisation",
-  "Energy Transition",
-  "Supply Chain",
-  "ICT Infrastructure",
-  "Commodity Trading",
-  "General Facilitation",
-  "Other",
-];
+import { Mail, MapPin, Lock, Send } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useScrollAnimation();
@@ -21,114 +11,87 @@ const ContactSection = () => {
     setSubmitted(true);
   };
 
+  const inputClasses =
+    "w-full bg-transparent border-b border-border px-0 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 transition-colors font-light";
+
   return (
-    <section id="contact" className="section-padding bg-navy-gradient" ref={ref}>
-      <div className="container-narrow">
+    <section id="contact" className="section-padding bg-background" ref={ref}>
+      <div className="container-narrow max-w-2xl mx-auto">
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-            Ready to Make It <span className="text-gradient-teal">Always Better</span>?
+          <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
+            Contact
+          </p>
+          <h2 className="text-2xl sm:text-3xl font-extralight text-foreground mb-6">
+            Private Inquiry
           </h2>
-          <p className="text-primary-foreground/70 max-w-2xl mx-auto">
-            Connect with us to explore opportunities in logistics, energy, supply chain, ICT,
-            commodity trading, or general business facilitation.
+          <div className="separator-line mb-8" />
+          <p className="text-xs text-muted-foreground font-light">
+            For select opportunities only. All communications strictly confidential.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 max-w-5xl mx-auto">
-          <div className="lg:col-span-3 animate-on-scroll">
-            {submitted ? (
-              <div className="rounded-xl border border-accent/30 bg-primary-foreground/5 p-12 text-center">
-                <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
-                  <Send className="text-accent" size={28} />
-                </div>
-                <h3 className="font-display text-2xl font-bold text-primary-foreground mb-2">Thank You!</h3>
-                <p className="text-primary-foreground/70">We'll be in touch shortly.</p>
+        <div className="animate-on-scroll delay-100">
+          {submitted ? (
+            <div className="text-center py-16">
+              <Send size={20} className="text-accent mx-auto mb-4" />
+              <h3 className="text-lg font-light text-foreground mb-2">Inquiry Received</h3>
+              <p className="text-xs text-muted-foreground font-light">
+                We will respond through secure channels.
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid sm:grid-cols-2 gap-6">
+                <input type="text" required placeholder="Name *" className={inputClasses} />
+                <input type="email" required placeholder="Email *" className={inputClasses} />
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    required
-                    placeholder="Your Name *"
-                    className="w-full rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 px-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-accent/50 transition-colors"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Company"
-                    className="w-full rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 px-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-accent/50 transition-colors"
-                  />
-                </div>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <input
-                    type="email"
-                    required
-                    placeholder="Email *"
-                    className="w-full rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 px-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-accent/50 transition-colors"
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Phone"
-                    className="w-full rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 px-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-accent/50 transition-colors"
-                  />
-                </div>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    placeholder="Country"
-                    className="w-full rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 px-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-accent/50 transition-colors"
-                  />
-                  <select
-                    className="w-full rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 px-4 py-3 text-sm text-primary-foreground/70 focus:outline-none focus:border-accent/50 transition-colors"
-                    defaultValue=""
-                  >
-                    <option value="" disabled>Interested In...</option>
-                    {interestOptions.map((opt) => (
-                      <option key={opt} value={opt} className="text-foreground bg-background">{opt}</option>
-                    ))}
-                  </select>
-                </div>
-                <textarea
-                  rows={4}
-                  placeholder="Your Message"
-                  className="w-full rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 px-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-accent/50 transition-colors resize-none"
-                />
-                <button type="submit" className="btn-primary-evenor w-full sm:w-auto text-base">
-                  <Send size={16} className="mr-2" />
-                  Send Inquiry
-                </button>
-              </form>
-            )}
-          </div>
+              <div className="grid sm:grid-cols-2 gap-6">
+                <input type="tel" placeholder="Phone (optional)" className={inputClasses} />
+                <input type="text" placeholder="Company / Title" className={inputClasses} />
+              </div>
+              <input type="text" placeholder="Referral Source (recommended)" className={inputClasses} />
+              <textarea
+                rows={3}
+                placeholder="Your message"
+                className={`${inputClasses} resize-none`}
+              />
 
-          <div className="lg:col-span-2 space-y-8 animate-on-scroll delay-200">
-            <div>
-              <h3 className="font-display text-lg font-bold text-primary-foreground mb-4">Direct Contact</h3>
-              <div className="space-y-3">
-                <a href="mailto:joachimurio@evenor.co.za" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-accent transition-colors">
-                  <Mail size={16} className="text-accent" />
-                  <span><strong className="text-primary-foreground/90">CEO:</strong> joachimurio@evenor.co.za</span>
-                </a>
-                <a href="mailto:sandykhumalo@evenor.co.za" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-accent transition-colors">
-                  <Mail size={16} className="text-accent" />
-                  <span><strong className="text-primary-foreground/90">COO:</strong> sandykhumalo@evenor.co.za</span>
-                </a>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4">
+                <button
+                  type="submit"
+                  className="text-xs font-medium tracking-[0.15em] uppercase px-8 py-3.5 border border-accent/40 text-accent hover:bg-accent/10 transition-all duration-300"
+                >
+                  Submit Confidential Inquiry
+                </button>
+                <span className="flex items-center gap-1.5 text-xs text-muted-foreground/40">
+                  <Lock size={10} />
+                  Encrypted & Private
+                </span>
               </div>
-            </div>
-            <div>
-              <h3 className="font-display text-lg font-bold text-primary-foreground mb-4">Headquarters</h3>
-              <div className="flex items-start gap-3 text-sm text-primary-foreground/70">
-                <MapPin size={16} className="text-accent mt-0.5" />
-                <span>Blouberg, Cape Town<br />South Africa</span>
-              </div>
-            </div>
-            <div>
-              <h3 className="font-display text-lg font-bold text-primary-foreground mb-4">Connect</h3>
-              <a href="#" className="inline-flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-accent transition-colors">
-                <Linkedin size={18} className="text-accent" />
-                Follow us on LinkedIn
-              </a>
-            </div>
+            </form>
+          )}
+        </div>
+
+        <div className="mt-20 pt-12 border-t border-border text-center space-y-4 animate-on-scroll delay-200">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-xs text-muted-foreground">
+            <a
+              href="mailto:joachimurio@evenor.co.za"
+              className="flex items-center gap-1.5 hover:text-accent transition-colors duration-300"
+            >
+              <Mail size={12} />
+              joachimurio@evenor.co.za
+            </a>
+            <a
+              href="mailto:sandykhumalo@evenor.co.za"
+              className="flex items-center gap-1.5 hover:text-accent transition-colors duration-300"
+            >
+              <Mail size={12} />
+              sandykhumalo@evenor.co.za
+            </a>
+          </div>
+          <div className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground/50">
+            <MapPin size={10} />
+            Blouberg, Cape Town, South Africa
           </div>
         </div>
       </div>

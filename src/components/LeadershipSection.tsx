@@ -13,7 +13,7 @@ const leaders = [
   },
   {
     name: "Sandy Khumalo",
-    role: "COO",
+    role: "COO & Managing Partner",
     bio: "Driving seamless execution and client outcomes.",
     email: "sandykhumalo@evenor.co.za",
     image: cooImg,

@@ -3,8 +3,7 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Home", href: "#home" },
-  { label: "Expertise", href: "#expertise" },
-  { label: "Global Reach", href: "#global-reach" },
+  { label: "Facilitation", href: "#facilitation" },
   { label: "Leadership", href: "#leadership" },
   { label: "Contact", href: "#contact" },
 ];
@@ -27,70 +26,69 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-primary/95 backdrop-blur-md shadow-lg py-3"
-          : "bg-transparent py-5"
+          ? "bg-background/95 backdrop-blur-md border-b border-border py-4"
+          : "bg-transparent py-6"
       }`}
     >
-      <div className="container-narrow flex items-center justify-between px-4 sm:px-6 lg:px-8">
-        <button onClick={() => scrollTo("#home")} className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-            <span className="font-display text-accent-foreground font-bold text-lg">E</span>
-          </div>
-          <span className="font-display text-primary-foreground text-xl font-bold tracking-tight">
+      <div className="container-narrow flex items-center justify-between px-6 sm:px-8 lg:px-12">
+        <button onClick={() => scrollTo("#home")} className="group">
+          <span className="text-foreground text-lg font-light tracking-[0.2em] uppercase">
             Evenor Holdings
           </span>
         </button>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
             <button
               key={item.label}
               onClick={() => scrollTo(item.href)}
-              className="text-primary-foreground/80 hover:text-accent text-sm font-medium transition-colors duration-200"
+              className="text-muted-foreground hover:text-foreground text-xs font-medium tracking-[0.15em] uppercase transition-colors duration-300"
             >
               {item.label}
             </button>
           ))}
           <button
             onClick={() => scrollTo("#contact")}
-            className="btn-primary-evenor text-sm px-6 py-2.5"
+            className="text-xs font-medium tracking-[0.1em] uppercase px-6 py-2.5 border border-accent/40 text-accent hover:bg-accent/10 transition-all duration-300"
           >
-            Get Connected
+            Initiate Discussion
           </button>
         </div>
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-primary-foreground"
+          className="md:hidden text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-primary/98 backdrop-blur-lg border-t border-primary-foreground/10 animate-fade-up">
-          <div className="px-4 py-6 space-y-4">
+        <div className="md:hidden bg-background/98 backdrop-blur-lg border-t border-border">
+          <div className="px-6 py-8 space-y-5">
             {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollTo(item.href)}
-                className="block w-full text-left text-primary-foreground/80 hover:text-accent py-2 text-base font-medium transition-colors"
+                className="block w-full text-left text-muted-foreground hover:text-foreground text-xs font-medium tracking-[0.15em] uppercase transition-colors"
               >
                 {item.label}
               </button>
             ))}
-            <button
-              onClick={() => scrollTo("#contact")}
-              className="btn-primary-evenor w-full text-center text-sm mt-4"
-            >
-              Get Connected — Book a Session
-            </button>
+            <div className="pt-4 border-t border-border">
+              <button
+                onClick={() => scrollTo("#contact")}
+                className="text-xs font-medium tracking-[0.1em] uppercase px-6 py-2.5 border border-accent/40 text-accent hover:bg-accent/10 transition-all duration-300 w-full"
+              >
+                Initiate Confidential Discussion
+              </button>
+            </div>
           </div>
         </div>
       )}

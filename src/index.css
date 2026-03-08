@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 210 50% 10%;
+    --background: 210 50% 4%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 50% 10%;
+    --card: 210 40% 6%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 50% 10%;
+    --popover: 210 40% 6%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 210 100% 12%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 210 50% 4%;
+    --primary-foreground: 0 0% 95%;
 
     --secondary: 174 100% 37%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 20% 95%;
-    --muted-foreground: 210 15% 45%;
+    --muted: 210 30% 10%;
+    --muted-foreground: 210 10% 55%;
 
     --accent: 174 100% 37%;
     --accent-foreground: 0 0% 100%;
@@ -30,29 +30,13 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
+    --border: 210 20% 12%;
+    --input: 210 20% 12%;
     --ring: 174 100% 37%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    /* Custom Evenor tokens */
-    --navy: 210 100% 12%;
-    --navy-light: 210 60% 20%;
-    --teal: 174 100% 37%;
-    --teal-glow: 174 100% 50%;
-    --cream: 40 33% 97%;
-    --gold: 40 80% 55%;
-
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
-
-    --gradient-navy: linear-gradient(135deg, hsl(210 100% 12%), hsl(210 60% 20%));
-    --gradient-teal: linear-gradient(135deg, hsl(174 100% 37%), hsl(174 100% 50%));
-    --gradient-hero: linear-gradient(180deg, hsl(210 100% 8%) 0%, hsl(210 100% 12%) 50%, hsl(210 60% 18%) 100%);
-    --shadow-card: 0 4px 24px -4px hsl(210 100% 12% / 0.08);
-    --shadow-card-hover: 0 12px 40px -8px hsl(174 100% 37% / 0.15);
-    --shadow-elevated: 0 20px 60px -12px hsl(210 100% 12% / 0.2);
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
   }
 }
 
@@ -62,11 +46,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body antialiased;
-  }
-
-  h1, h2, h3 {
-    font-family: var(--font-display);
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
   }
 
   html {
@@ -76,62 +57,21 @@
 
 @layer components {
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+    @apply px-6 sm:px-8 lg:px-12 py-20 md:py-32;
   }
 
   .container-narrow {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-5xl mx-auto;
   }
 
-  .text-gradient-teal {
-    background: linear-gradient(135deg, hsl(174 100% 37%), hsl(174 100% 55%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .bg-navy-gradient {
-    background: var(--gradient-hero);
-  }
-
-  .card-evenor {
-    @apply bg-card rounded-xl border border-border transition-all duration-300;
-    box-shadow: var(--shadow-card);
-  }
-
-  .card-evenor:hover {
-    box-shadow: var(--shadow-card-hover);
-    @apply border-accent/30 -translate-y-1;
-  }
-
-  .btn-primary-evenor {
-    @apply inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-sm tracking-wide transition-all duration-300;
-    background: var(--gradient-teal);
-    color: hsl(0 0% 100%);
-    box-shadow: 0 4px 14px -2px hsl(174 100% 37% / 0.4);
-  }
-
-  .btn-primary-evenor:hover {
-    box-shadow: 0 8px 24px -4px hsl(174 100% 37% / 0.5);
-    transform: translateY(-2px);
-  }
-
-  .btn-outline-evenor {
-    @apply inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-sm tracking-wide transition-all duration-300 border-2;
-    border-color: hsl(0 0% 100% / 0.3);
-    color: hsl(0 0% 100%);
-  }
-
-  .btn-outline-evenor:hover {
-    border-color: hsl(174 100% 37%);
-    background: hsl(174 100% 37% / 0.1);
-    color: hsl(174 100% 50%);
+  .text-accent-glow {
+    color: hsl(174 100% 37%);
   }
 
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
 
   .animate-on-scroll.visible {
@@ -139,10 +79,9 @@
     transform: translateY(0);
   }
 
-  .glow-dot {
-    @apply absolute rounded-full;
-    background: hsl(174 100% 50%);
-    box-shadow: 0 0 20px 8px hsl(174 100% 50% / 0.3);
+  .separator-line {
+    @apply w-12 h-px mx-auto;
+    background: hsl(174 100% 37% / 0.4);
   }
 }
 
@@ -151,5 +90,4 @@
   .delay-200 { transition-delay: 200ms; }
   .delay-300 { transition-delay: 300ms; }
   .delay-400 { transition-delay: 400ms; }
-  .delay-500 { transition-delay: 500ms; }
 }

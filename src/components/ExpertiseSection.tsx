@@ -1,60 +1,25 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
-const facilitationData = [
-  {
-    title: "Strategic Connectivity & High-Level Introductions",
-    description:
-      "Brokering confidential introductions between decision-makers, sovereign entities, and select enterprises across continents.",
-  },
-  {
-    title: "Commodity & Resource Trading",
-    description:
-      "Facilitating high-value commodity transactions with discretion, integrity, and deep market intelligence.",
-  },
-  {
-    title: "Infrastructure Advisory",
-    description:
-      "Expert counsel in logistics, energy transition, and digital/ICT infrastructure for transformative outcomes.",
-  },
-  {
-    title: "Policy & Government Relations",
-    description:
-      "Navigating policy landscapes and fostering constructive government engagement for transformative outcomes.",
-  },
-];
-
 const ExpertiseSection = () => {
   const ref = useScrollAnimation();
 
   return (
-    <section id="facilitation" className="section-padding bg-background" ref={ref}>
-      <div className="container-narrow">
-        <div className="text-center mb-20 animate-on-scroll">
-          <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
-            Facilitation
-          </p>
-          <h2 className="text-2xl sm:text-3xl font-extralight text-foreground mb-6">
-            What We Do
+    <section id="facilitation" className="section-padding" ref={ref}>
+      <div className="container-narrow max-w-2xl mx-auto text-center">
+        <div className="animate-on-scroll">
+          <h2 className="font-serif text-2xl sm:text-3xl font-normal text-foreground tracking-[0.06em] mb-10">
+            Legacy Facilitation
           </h2>
-          <div className="separator-line" />
+          <div className="separator-rule mb-10" />
         </div>
 
-        <div className="space-y-16 max-w-2xl mx-auto">
-          {facilitationData.map((item, i) => (
-            <div
-              key={item.title}
-              className="text-center animate-on-scroll"
-              style={{ transitionDelay: `${i * 100}ms` }}
-            >
-              <h3 className="text-sm font-medium tracking-[0.1em] uppercase text-foreground mb-4">
-                {item.title}
-              </h3>
-              <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
+        <p className="animate-on-scroll delay-200 text-sm sm:text-base text-muted-foreground font-light leading-[1.9] tracking-wide">
+          Evenor Holdings provides confidential strategic connectivity, commodity
+          interests, infrastructure counsel, and policy engagement for select
+          individuals and institutions of longstanding influence. Headquartered
+          in Blouberg, Cape Town. Engagements by referral and mutual recognition
+          only.
+        </p>
       </div>
     </section>
   );

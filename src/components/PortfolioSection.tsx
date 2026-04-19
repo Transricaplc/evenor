@@ -58,9 +58,16 @@ const PortfolioSection = () => {
                 {company.tag}
               </p>
 
-              <h3 className="font-serif text-3xl sm:text-4xl font-normal text-foreground tracking-[0.04em] mb-5">
+              <h3 className="font-serif text-3xl sm:text-4xl font-normal text-foreground tracking-[0.04em] mb-2">
                 {company.name}
               </h3>
+
+              <p
+                className="text-xs font-sans font-light tracking-[0.15em] mb-5 transition-colors duration-500"
+                style={{ color: company.accentColor }}
+              >
+                {company.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+              </p>
 
               <p className="text-sm text-muted-foreground font-light leading-[1.8] tracking-wide mb-8">
                 {company.description}

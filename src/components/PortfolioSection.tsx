@@ -8,7 +8,7 @@ const portfolio = [
       "Urban safety intelligence platform for South African cities. Real-time risk scoring, SOS network, and AI-powered route safety for township and metro commuters.",
     status: "SEED STAGE",
     accentColor: "#7C3AED",
-    href: "https://www.almien.co.za",
+    href: "https://almien.live",
   },
   {
     name: "Sema",

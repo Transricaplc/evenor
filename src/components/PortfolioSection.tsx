@@ -8,7 +8,7 @@ const portfolio = [
       "Urban safety intelligence platform for South African cities. Real-time risk scoring, SOS network, and AI-powered route safety for township and metro commuters.",
     status: "SEED STAGE",
     accentColor: "#7C3AED",
-    href: "https://almien.live",
+    href: "https://www.almien.live/",
   },
   {
     name: "Sema",
@@ -58,9 +58,16 @@ const PortfolioSection = () => {
                 {company.tag}
               </p>
 
-              <h3 className="font-serif text-3xl sm:text-4xl font-normal text-foreground tracking-[0.04em] mb-5">
+              <h3 className="font-serif text-3xl sm:text-4xl font-normal text-foreground tracking-[0.04em] mb-2">
                 {company.name}
               </h3>
+
+              <p
+                className="text-xs font-sans font-light tracking-[0.15em] mb-5 transition-colors duration-500"
+                style={{ color: company.accentColor }}
+              >
+                {company.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+              </p>
 
               <p className="text-sm text-muted-foreground font-light leading-[1.8] tracking-wide mb-8">
                 {company.description}

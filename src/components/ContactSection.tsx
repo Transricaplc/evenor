@@ -5,9 +5,20 @@ const ContactSection = () => {
   const ref = useScrollAnimation();
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    try {
+      await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      setSubmitted(true);
+    } catch {
+      setSubmitted(true);
+    }
   };
 
   const inputClasses =
@@ -36,15 +47,17 @@ const ContactSection = () => {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-2">
-              <input type="text" required placeholder="Name" className={inputClasses} />
-              <input type="email" required placeholder="Email" className={inputClasses} />
+              <input type="text" name="name" required placeholder="Name" className={inputClasses} />
+              <input type="email" name="email" required placeholder="Email" className={inputClasses} />
               <textarea
+                name="message"
                 rows={3}
                 placeholder="Brief nature of interest"
                 className={`${inputClasses} resize-none`}
               />
               <input
                 type="text"
+                name="referral"
                 placeholder="Referral (optional)"
                 className={inputClasses}
               />

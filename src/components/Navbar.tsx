@@ -28,12 +28,20 @@ const Navbar = () => {
           </span>
         </button>
 
-        <button
-          onClick={() => scrollTo("#contact")}
-          className="text-muted-foreground hover:text-foreground text-xs font-sans font-light tracking-[0.2em] uppercase transition-colors duration-500"
-        >
-          Contact
-        </button>
+        <div className="flex items-center gap-8">
+          <button
+            onClick={() => scrollTo("#portfolio")}
+            className="text-muted-foreground hover:text-foreground text-xs font-sans font-light tracking-[0.2em] uppercase transition-colors duration-500"
+          >
+            Portfolio
+          </button>
+          <button
+            onClick={() => scrollTo("#contact")}
+            className="text-muted-foreground hover:text-foreground text-xs font-sans font-light tracking-[0.2em] uppercase transition-colors duration-500"
+          >
+            Contact
+          </button>
+        </div>
       </div>
     </nav>
   );

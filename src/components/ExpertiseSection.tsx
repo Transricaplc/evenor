@@ -14,10 +14,11 @@ const ExpertiseSection = () => {
         </div>
 
         <p className="animate-on-scroll delay-200 text-sm sm:text-base text-muted-foreground font-light leading-[1.9] tracking-wide">
-          Evenor Holdings builds and scales technology companies addressing real
-          infrastructure gaps in African cities. We focus on two verticals: public
-          safety intelligence and civic accountability software. Both companies are
-          live, seeded with real data, and operating in their respective markets.
+          Evenor Holdings builds, scales, and quietly stewards ventures across
+          African markets — spanning safety intelligence, civic technology,
+          premium lifestyle, sport and culture, logistics, and advisory. Each
+          holding is operated with discretion, patience, and an enduring
+          commitment to craft.
         </p>
       </div>
     </section>

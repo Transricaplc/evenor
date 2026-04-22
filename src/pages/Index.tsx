@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import PortfolioSection from "@/components/PortfolioSection";
+import InterestsSection from "@/components/InterestsSection";
 import LeadershipSection from "@/components/LeadershipSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -12,7 +13,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      {[ExpertiseSection, PortfolioSection, LeadershipSection, ContactSection].map((Section, i) => (
+      {[ExpertiseSection, PortfolioSection, InterestsSection, LeadershipSection, ContactSection].map((Section, i) => (
         <motion.div
           key={i}
           initial={{ opacity: 0, y: 20 }}

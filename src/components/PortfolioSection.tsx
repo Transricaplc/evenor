@@ -19,6 +19,24 @@ const portfolio = [
     accentColor: "#F5C500",
     href: "https://semaapp.lovable.app",
   },
+  {
+    name: "Moodies",
+    tag: "LIFESTYLE · SOUTH AFRICA",
+    description:
+      "A premium cannabis lifestyle brand built on quiet luxury — minimalist retail, mood-led product design, and a flagship kiosk model rolling out across the Western Cape.",
+    status: "PRE-LAUNCH",
+    accentColor: "#C9A96E",
+    href: "#contact",
+  },
+  {
+    name: "eKasiBets",
+    tag: "SPORTS & CULTURE · SOUTH AFRICA",
+    description:
+      "Reimagining betting for South Africa's youth — a culturally-rooted, data-light platform that shifts ownership, community wealth, and creative leadership back to the people.",
+    status: "SEED ROUND",
+    accentColor: "#8FAF7E",
+    href: "#contact",
+  },
 ];
 
 const PortfolioSection = () => {
@@ -35,55 +53,61 @@ const PortfolioSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {portfolio.map((company, i) => (
-            <a
-              key={company.name}
-              href={company.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block border border-border/60 p-8 hover:border-[var(--card-accent)] transition-all duration-500 group animate-on-scroll"
-              style={
-                {
-                  "--card-accent": company.accentColor,
-                  transitionDelay: `${i * 150}ms`,
-                } as React.CSSProperties
-              }
-            >
-              <div
-                className="h-px w-10 mb-8 transition-all duration-500 group-hover:w-20"
-                style={{ background: company.accentColor }}
-              />
-
-              <p className="text-[10px] font-sans font-light tracking-[0.25em] text-muted-foreground/70 mb-4">
-                {company.tag}
-              </p>
-
-              <h3 className="font-serif text-3xl sm:text-4xl font-normal text-foreground tracking-[0.04em] mb-2">
-                {company.name}
-              </h3>
-
-              <p
-                className="text-xs font-sans font-light tracking-[0.15em] mb-5 transition-colors duration-500"
-                style={{ color: company.accentColor }}
+          {portfolio.map((company, i) => {
+            const isExternal = company.href.startsWith("http");
+            return (
+              <a
+                key={company.name}
+                href={company.href}
+                {...(isExternal
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+                className="block border border-border/60 p-8 hover:border-[var(--card-accent)] transition-all duration-500 group animate-on-scroll"
+                style={
+                  {
+                    "--card-accent": company.accentColor,
+                    transitionDelay: `${i * 150}ms`,
+                  } as React.CSSProperties
+                }
               >
-                {company.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
-              </p>
-
-              <p className="text-sm text-muted-foreground font-light leading-[1.8] tracking-wide mb-8">
-                {company.description}
-              </p>
-
-              <div className="flex items-center gap-3 pt-6 border-t border-border/40">
-                <span
-                  className="w-1.5 h-1.5 rounded-full"
+                <div
+                  className="h-px w-10 mb-8 transition-all duration-500 group-hover:w-20"
                   style={{ background: company.accentColor }}
                 />
-                <span className="text-[10px] font-sans font-light tracking-[0.25em] text-muted-foreground/80 uppercase">
-                  {company.status}
-                </span>
-              </div>
-            </a>
-          ))}
+
+                <p className="text-[10px] font-sans font-light tracking-[0.25em] text-muted-foreground/70 mb-4">
+                  {company.tag}
+                </p>
+
+                <h3 className="font-serif text-3xl sm:text-4xl font-normal text-foreground tracking-[0.04em] mb-2">
+                  {company.name}
+                </h3>
+
+                {isExternal && (
+                  <p
+                    className="text-xs font-sans font-light tracking-[0.15em] mb-5 transition-colors duration-500"
+                    style={{ color: company.accentColor }}
+                  >
+                    {company.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                  </p>
+                )}
+
+                <p className="text-sm text-muted-foreground font-light leading-[1.8] tracking-wide mb-8">
+                  {company.description}
+                </p>
+
+                <div className="flex items-center gap-3 pt-6 border-t border-border/40">
+                  <span
+                    className="w-1.5 h-1.5 rounded-full"
+                    style={{ background: company.accentColor }}
+                  />
+                  <span className="text-[10px] font-sans font-light tracking-[0.25em] text-muted-foreground/80 uppercase">
+                    {company.status}
+                  </span>
+                </div>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -26,7 +26,7 @@ const portfolio = [
       "A premium cannabis lifestyle brand built on quiet luxury — minimalist retail, mood-led product design, and a flagship kiosk model rolling out across the Western Cape.",
     status: "PRE-LAUNCH",
     accentColor: "#C9A96E",
-    href: "#contact",
+    href: "https://moodies.site",
   },
   {
     name: "eKasiBets",
@@ -35,7 +35,16 @@ const portfolio = [
       "Reimagining betting for South Africa's youth — a culturally-rooted, data-light platform that shifts ownership, community wealth, and creative leadership back to the people.",
     status: "SEED ROUND",
     accentColor: "#8FAF7E",
-    href: "#contact",
+    href: "https://ekasibets.co.za/",
+  },
+  {
+    name: "NeuralGift",
+    tag: "AI COMMERCE · GLOBAL",
+    description:
+      "Revolutionising the future of gifting. One card. Every AI tool. Instantly redeemable across ChatGPT, Claude, Midjourney and more — split exactly how the recipient prefers.",
+    status: "LIVE",
+    accentColor: "#9FB8C9",
+    href: "https://neuralgift.app/",
   },
 ];
 

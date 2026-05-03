@@ -36,6 +36,12 @@ const Navbar = () => {
             Portfolio
           </button>
           <button
+            onClick={() => scrollTo("#recognition")}
+            className="hidden sm:inline text-muted-foreground hover:text-foreground text-xs font-sans font-light tracking-[0.2em] uppercase transition-colors duration-500"
+          >
+            Recognition
+          </button>
+          <button
             onClick={() => scrollTo("#contact")}
             className="text-muted-foreground hover:text-foreground text-xs font-sans font-light tracking-[0.2em] uppercase transition-colors duration-500"
           >

@@ -74,8 +74,11 @@ const ContactSection = () => {
           )}
         </div>
 
-        <div className="mt-24 pt-12 border-t border-border/40 text-center space-y-3 animate-on-scroll delay-400">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-xs text-muted-foreground/50 font-light tracking-wide">
+        <div className="mt-24 pt-12 border-t border-border/40 text-center space-y-4 animate-on-scroll delay-400">
+          <p className="text-[10px] font-sans font-light tracking-[0.3em] uppercase text-muted-foreground/50">
+            Direct Counsel
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-xs text-muted-foreground/60 font-light tracking-wide">
             <a
               href="mailto:joachimurio@evenor.co.za"
               className="hover:text-accent transition-colors duration-500"
@@ -89,8 +92,8 @@ const ContactSection = () => {
               sandykhumalo@evenor.co.za
             </a>
           </div>
-          <p className="text-xs text-muted-foreground/30 font-light tracking-wide">
-            Blouberg, Cape Town
+          <p className="text-[10px] text-muted-foreground/40 font-light tracking-[0.2em] uppercase pt-2">
+            Blouberg · Cape Town · By Appointment
           </p>
         </div>
       </div>

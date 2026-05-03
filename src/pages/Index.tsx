@@ -4,6 +4,7 @@ import ExpertiseSection from "@/components/ExpertiseSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import InterestsSection from "@/components/InterestsSection";
 import LeadershipSection from "@/components/LeadershipSection";
+import RecognitionSection from "@/components/RecognitionSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -13,7 +14,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      {[ExpertiseSection, PortfolioSection, InterestsSection, LeadershipSection, ContactSection].map((Section, i) => (
+      {[ExpertiseSection, PortfolioSection, InterestsSection, LeadershipSection, RecognitionSection, ContactSection].map((Section, i) => (
         <motion.div
           key={i}
           initial={{ opacity: 0, y: 20 }}

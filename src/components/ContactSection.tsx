@@ -1,100 +1,74 @@
 import { useState, FormEvent } from "react";
-import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { MapPin, Mail, Globe } from "lucide-react";
 
 const ContactSection = () => {
-  const ref = useScrollAnimation();
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    try {
-      await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
-      });
-      setSubmitted(true);
-    } catch {
-      setSubmitted(true);
-    }
+    setSubmitted(true);
   };
 
-  const inputClasses =
-    "w-full bg-transparent border-b border-border/60 px-0 py-4 text-sm text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-accent/40 transition-colors duration-500 font-light tracking-wide";
+  const inp =
+    "w-full bg-white border border-navy/15 px-4 py-3 text-sm text-navy placeholder:text-midgray/70 focus:outline-none focus:border-gold transition-colors";
 
   return (
-    <section id="contact" className="section-padding" ref={ref}>
-      <div className="container-narrow max-w-xl mx-auto">
-        <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="font-serif text-2xl sm:text-3xl font-normal text-foreground tracking-[0.06em] mb-6">
-            Private Correspondence
+    <section id="contact" className="section-pad" style={{ background: "linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--navy-light)) 100%)" }}>
+      <div className="container-wide max-w-4xl">
+        <div className="text-center mb-12 text-white">
+          <p className="gold-label mb-4">Start a Conversation</p>
+          <h2 className="font-display text-white text-3xl md:text-5xl font-bold mb-6">
+            The Right Project Deserves<br />the Right Partner.
           </h2>
-          <div className="separator-rule mb-6" />
-          <p className="text-xs text-muted-foreground font-light tracking-[0.12em]">
-            All matters handled with absolute discretion.
+          <p className="text-white/75 max-w-2xl mx-auto font-light leading-relaxed text-base md:text-lg">
+            Whether you are a government authority commissioning infrastructure, a mining operator seeking operational excellence, or an international firm seeking African market entry support — Evenor Holdings invites a confidential, no-obligation engagement with our principals.
           </p>
         </div>
 
-        <div className="animate-on-scroll delay-200">
-          {submitted ? (
-            <div className="text-center py-20">
-              <p className="font-serif text-lg text-foreground mb-3">Received</p>
-              <p className="text-xs text-muted-foreground font-light tracking-wide">
-                We shall respond through appropriate channels.
-              </p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-2">
-              <input type="text" name="name" required placeholder="Name" className={inputClasses} />
-              <input type="email" name="email" required placeholder="Email" className={inputClasses} />
-              <textarea
-                name="message"
-                rows={3}
-                placeholder="Brief nature of interest"
-                className={`${inputClasses} resize-none`}
-              />
-              <input
-                type="text"
-                name="referral"
-                placeholder="Referral (optional)"
-                className={inputClasses}
-              />
-
-              <div className="pt-8">
-                <button
-                  type="submit"
-                  className="text-xs font-light tracking-[0.2em] uppercase px-10 py-3 border border-accent/30 text-accent/80 hover:text-accent hover:border-accent/60 transition-all duration-500"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-          )}
-        </div>
-
-        <div className="mt-24 pt-12 border-t border-border/40 text-center space-y-4 animate-on-scroll delay-400">
-          <p className="text-[10px] font-sans font-light tracking-[0.3em] uppercase text-muted-foreground/50">
-            Direct Counsel
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-xs text-muted-foreground/60 font-light tracking-wide">
-            <a
-              href="mailto:joachimurio@evenor.co.za"
-              className="hover:text-accent transition-colors duration-500"
-            >
-              joachimurio@evenor.co.za
-            </a>
-            <a
-              href="mailto:sandykhumalo@evenor.co.za"
-              className="hover:text-accent transition-colors duration-500"
-            >
-              sandykhumalo@evenor.co.za
-            </a>
+        {submitted ? (
+          <div className="bg-navy-deep/40 border border-gold/40 p-12 text-center animate-fade-in">
+            <p className="text-gold font-display text-2xl md:text-3xl">
+              Thank you. A member of our principals' office will contact you within 48 hours.
+            </p>
           </div>
-          <p className="text-[10px] text-muted-foreground/40 font-light tracking-[0.2em] uppercase pt-2">
-            Blouberg · Cape Town · By Appointment
-          </p>
+        ) : (
+          <form onSubmit={handleSubmit} className="bg-white p-8 md:p-10 shadow-2xl">
+            <div className="grid md:grid-cols-2 gap-4">
+              <input required name="name" placeholder="Full Name" className={inp} />
+              <input required name="org" placeholder="Organisation / Institution" className={inp} />
+              <input required name="country" placeholder="Country" className={inp} />
+              <select required name="sector" className={inp} defaultValue="">
+                <option value="" disabled>Sector of Interest</option>
+                <option>Logistics</option>
+                <option>ICT Infrastructure</option>
+                <option>Consulting</option>
+                <option>Petrochemicals</option>
+                <option>Mining</option>
+                <option>Other</option>
+              </select>
+              <input required type="email" name="email" placeholder="Email Address" className={inp} />
+              <input name="phone" placeholder="Phone Number" className={inp} />
+            </div>
+            <textarea required name="msg" rows={5} placeholder="Message / Nature of Enquiry" className={`${inp} mt-4 resize-none`} />
+            <div className="mt-6 flex justify-end">
+              <button type="submit" className="btn-gold w-full md:w-auto">Submit Enquiry →</button>
+            </div>
+          </form>
+        )}
+
+        <div className="grid md:grid-cols-3 gap-6 mt-14 text-white text-sm">
+          <div className="flex items-start gap-3">
+            <MapPin size={18} className="text-gold mt-0.5 flex-shrink-0" />
+            <span className="font-light">1st Floor, Cape Dahlia, 80 Coral Road, West Beach, Cape Town, 7441</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <Mail size={18} className="text-gold flex-shrink-0" />
+            <a href="mailto:info@evenor.co.za" className="hover:text-gold transition-colors">info@evenor.co.za</a>
+          </div>
+          <div className="flex items-center gap-3">
+            <Globe size={18} className="text-gold flex-shrink-0" />
+            <span>www.evenor.co.za</span>
+          </div>
         </div>
       </div>
     </section>

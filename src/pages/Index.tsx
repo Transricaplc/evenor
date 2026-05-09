@@ -1,38 +1,29 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ExpertiseSection from "@/components/ExpertiseSection";
-import PortfolioSection from "@/components/PortfolioSection";
-import InterestsSection from "@/components/InterestsSection";
+import PhilosophySection from "@/components/PhilosophySection";
+import SectorsSection from "@/components/SectorsSection";
+import WhyEvenorSection from "@/components/WhyEvenorSection";
 import LeadershipSection from "@/components/LeadershipSection";
-import RecognitionSection from "@/components/RecognitionSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import SectorDeepDive from "@/components/SectorDeepDive";
+import PartnersSection from "@/components/PartnersSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import { motion } from "framer-motion";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-offwhite">
       <Navbar />
       <HeroSection />
-      {[ExpertiseSection, PortfolioSection, InterestsSection, LeadershipSection, RecognitionSection, ContactSection].map((Section, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-        >
-          <Section />
-        </motion.div>
-      ))}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <Footer />
-      </motion.div>
+      <PhilosophySection />
+      <SectorsSection />
+      <WhyEvenorSection />
+      <LeadershipSection />
+      <ProjectsSection />
+      <SectorDeepDive />
+      <PartnersSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 };

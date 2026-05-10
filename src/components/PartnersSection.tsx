@@ -5,8 +5,16 @@ const partners = [
 
 const PartnersSection = () => {
   return (
-    <section className="bg-navy section-pad text-white">
-      <div className="container-wide max-w-5xl text-center">
+    <section className="relative bg-navy section-pad text-white overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center pointer-events-none"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0?w=1920&q=80')",
+          opacity: 0.08,
+        }}
+        aria-hidden
+      />
+      <div className="relative container-wide max-w-5xl text-center">
         <p className="gold-label mb-4">Ecosystem</p>
         <h2 className="font-display text-white text-3xl md:text-5xl font-bold mb-6">
           Global Partners. African Mandate.

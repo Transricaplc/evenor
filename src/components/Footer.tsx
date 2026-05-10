@@ -25,7 +25,7 @@ const Footer = () => {
             <li><a href="#about" className="hover:text-gold transition-colors">About Evenor Holdings</a></li>
             <li><a href="#leadership" className="hover:text-gold transition-colors">Leadership</a></li>
             <li><a href="#projects" className="hover:text-gold transition-colors">Projects & Portfolio</a></li>
-            <li><a href="mailto:talent@evenor.co.za" className="hover:text-gold transition-colors">Careers</a></li>
+            <li><a href="#contact" className="hover:text-gold transition-colors">Strategic Alliances</a></li>
             <li><a href="#contact" className="hover:text-gold transition-colors">Partner With Us</a></li>
           </ul>
         </div>
@@ -33,7 +33,7 @@ const Footer = () => {
           <p className="text-white text-[11px] tracking-[0.2em] uppercase mb-4">Legal & Contact</p>
           <ul className="space-y-2 text-sm font-light">
             <li><a href="mailto:info@evenor.co.za" className="hover:text-gold transition-colors">info@evenor.co.za</a></li>
-            <li>+27 21 554 4000</li>
+            <li><a href="tel:+27815402781" className="hover:text-gold transition-colors">+27 81 540 2781</a></li>
             <li>Privacy Policy</li>
             <li>Terms of Engagement</li>
             <li>Sitemap</li>

@@ -161,6 +161,23 @@ const SectorDeepDive = () => {
           </div>
         </div>
       </div>
+
+      <div className="grid grid-cols-3 mt-16">
+        {[
+          "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=640&q=80",
+          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=640&q=80",
+          "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=640&q=80",
+        ].map((src, i) => (
+          <div key={i} className="overflow-hidden h-[200px] md:h-[280px]">
+            <img
+              src={src}
+              alt=""
+              loading="lazy"
+              className="w-full h-full object-cover transition-all duration-500 hover:scale-[1.03] hover:brightness-110"
+            />
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

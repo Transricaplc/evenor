@@ -1,60 +1,139 @@
-const projects = [
+import { useEffect, useRef, useState } from "react";
+
+const cards = [
   {
-    img: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=600&q=80",
-    tag: "CIVIC TECHNOLOGY",
-    title: "Sema App — Tanzania Civic Directory",
-    desc: "Digital platform connecting Tanzanian citizens with verified government officials across all five tiers of government. Currently serving 26 regions of Tanzania through the Sema App platform.",
-    status: "LIVE — 2025",
+    img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=85",
+    tag: "LOGISTICS & SUPPLY CHAIN",
+    title: "Port-to-Hinterland Freight Orchestration",
+    body: "Full-corridor logistics management from port gate to final destination — customs clearance, bonded warehousing, multimodal freight, and last-mile distribution engineered for Southern and East African trade routes.",
   },
   {
-    img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80",
-    tag: "SAFETY INTELLIGENCE",
-    title: "Almien — Urban Safety Platform — South Africa",
-    desc: "AI-powered urban safety intelligence platform delivering real-time crime intelligence, safe-route navigation, and community safety networks to users across Cape Town metropolitan area. Seed-funded 2026.",
-    status: "LIVE — 2026",
+    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=85",
+    tag: "ICT INFRASTRUCTURE",
+    title: "National-Scale Connectivity Engineering",
+    body: "Turnkey fibre optic backbone deployment, enterprise core networking, internet gateway commissioning, and Wi-Fi 6 coverage for ports, campuses, and government facilities — designed to ITU-T, TIA-568, and TCRA standards. Executed with Tier-1 EPCC partners.",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&q=85",
+    tag: "MANAGEMENT CONSULTING",
+    title: "Boardroom-to-Implementation Advisory",
+    body: "Strategic counsel for governments, parastatals, and multinationals navigating African regulatory complexity — from RFQ structuring and PPP design to institutional reform and digital transformation roadmapping. Principal-level engagement guaranteed.",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&q=85",
+    tag: "PETROCHEMICALS SOLUTIONS",
+    title: "Downstream Energy Infrastructure",
+    body: "Petroleum product procurement, fuel storage terminal commissioning, downstream distribution network design, and HSE-compliant facility engineering for refineries, port installations, and industrial fuel facilities across East and Southern Africa.",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=85",
+    tag: "MINING SOLUTIONS",
+    title: "Mine-to-Market Value Chain Delivery",
+    body: "Operational efficiency advisory, environmental compliance engineering, mineral processing technology integration, and mine-to-port logistics optimisation for junior and mid-tier operators — aligned to national Mining Commission frameworks.",
   },
 ];
 
+const metrics = [
+  { value: "5", label: "Core Sectors" },
+  { value: "3", label: "Continental Time Zones" },
+  { value: "12+", label: "Countries of Operation" },
+  { value: "48hrs", label: "Response Commitment" },
+  { value: "Tier-1", label: "Technical Partners" },
+];
+
+const CapacityCard = ({ c }: { c: typeof cards[0] }) => (
+  <div className="relative overflow-hidden border-t-4 border-gold group min-h-[340px] flex flex-col justify-end shadow-xl">
+    <div
+      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+      style={{ backgroundImage: `url('${c.img}')` }}
+    />
+    <div className="absolute inset-0 bg-navy-deep/80" />
+    <div className="relative p-6 z-10">
+      <span className="inline-block bg-gold text-navy text-[10px] font-bold px-3 py-1 tracking-[0.15em] uppercase mb-4 rounded-full">
+        {c.tag}
+      </span>
+      <h3 className="font-display text-white text-[22px] font-bold mb-3 leading-snug">{c.title}</h3>
+      <p className="text-white/75 text-sm font-light leading-relaxed mb-5">{c.body}</p>
+      <div className="flex items-center gap-2 pt-4 border-t border-white/15">
+        <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+        <span className="text-white text-xs font-medium tracking-wide">Deployment Ready</span>
+      </div>
+    </div>
+  </div>
+);
+
+const Counter = ({ to }: { to: string }) => {
+  const ref = useRef<HTMLSpanElement>(null);
+  const [val, setVal] = useState(to);
+  const started = useRef(false);
+  const num = parseInt(to.replace(/\D/g, ""), 10);
+  const isNumeric = !isNaN(num) && /^\d/.test(to);
+
+  useEffect(() => {
+    if (!isNumeric) return;
+    const suffix = to.replace(/^\d+/, "");
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting && !started.current) {
+          started.current = true;
+          const start = performance.now();
+          const dur = 1400;
+          const tick = (t: number) => {
+            const p = Math.min(1, (t - start) / dur);
+            const n = Math.round(num * (0.5 - Math.cos(Math.PI * p) / 2));
+            setVal(`${n}${suffix}`);
+            if (p < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        }
+      });
+    }, { threshold: 0.4 });
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, [to, num, isNumeric]);
+
+  return <span ref={ref}>{val}</span>;
+};
+
 const ProjectsSection = () => {
-  const go = (h: string) => document.querySelector(h)?.scrollIntoView({ behavior: "smooth" });
   return (
     <section id="projects" className="bg-navy section-pad text-white">
       <div className="container-wide">
-        <div className="text-center mb-16">
-          <p className="gold-label mb-4">Selected Projects</p>
-          <h2 className="font-display text-white text-3xl md:text-5xl font-bold">
-            Where We Have Delivered.
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <p className="gold-label mb-4">Our Capacity</p>
+          <h2 className="font-display text-white text-3xl md:text-5xl font-bold mb-6">
+            What Evenor Holdings Brings to the Table.
           </h2>
+          <p className="text-white/70 text-base md:text-lg font-light leading-relaxed">
+            We do not lead with what we have done. We lead with what we are built to do — and the partners, technical depth, and principal-level access that make us the right choice before the contract is signed.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-          {projects.map((p) => (
-            <div key={p.title} className="group bg-navy-light/40 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
-              <div className="aspect-[16/10] overflow-hidden">
-                <img src={p.img} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-500" />
-              </div>
-              <div className="p-6">
-                <span className="inline-block bg-gold text-navy text-[10px] font-bold px-3 py-1 tracking-[0.15em] mb-4">
-                  {p.tag}
-                </span>
-                <h3 className="font-display text-white text-xl mb-3">{p.title}</h3>
-                <p className="text-white/70 text-sm font-light leading-relaxed mb-4">{p.desc}</p>
-                <span className="inline-block bg-blue-500/20 text-blue-200 text-[10px] font-semibold px-3 py-1 tracking-[0.15em]">
-                  {p.status}
-                </span>
-              </div>
-            </div>
-          ))}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {cards.slice(0, 3).map((c) => <CapacityCard key={c.title} c={c} />)}
+        </div>
+        <div className="grid md:grid-cols-2 gap-6 mt-6 lg:max-w-[66%] lg:mx-auto">
+          {cards.slice(3).map((c) => <CapacityCard key={c.title} c={c} />)}
+        </div>
+      </div>
 
-          <div className="border-2 border-dashed border-gold/40 p-8 flex flex-col justify-center">
-            <h3 className="font-display italic text-gold text-2xl mb-4">Pipeline — 2026/27</h3>
-            <p className="text-white/60 text-sm font-light leading-relaxed mb-6">
-              Logistics corridor development · Petroleum terminal advisory · Mining digitisation programme · Cross-border ICT infrastructure
-            </p>
-            <button onClick={() => go("#contact")} className="text-gold text-sm font-medium self-start hover:underline">
-              Enquire About Opportunities →
-            </button>
+      <div className="mt-20 bg-navy-deep py-16">
+        <div className="container-wide">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-10 text-center">
+            {metrics.map((m) => (
+              <div key={m.label}>
+                <div className="font-display text-gold text-4xl md:text-[44px] font-bold mb-2">
+                  <Counter to={m.value} />
+                </div>
+                <div className="text-white text-[11px] md:text-[13px] uppercase tracking-[0.18em] font-normal">
+                  {m.label}
+                </div>
+              </div>
+            ))}
           </div>
+          <p className="text-center italic text-white text-[15px] font-light max-w-2xl mx-auto mt-12 leading-relaxed">
+            "Evenor Holdings principals engage directly with government authorities, parastatal boards, and C-suite counterparts — because the right relationship determines the right outcome."
+          </p>
         </div>
       </div>
     </section>

@@ -34,13 +34,15 @@ const WhyEvenorSection = () => {
           </div>
         </div>
 
-        <div
-          className="min-h-[400px] lg:min-h-full bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=900&q=85')",
-          }}
-        />
+        <div className="relative flex items-center justify-center p-8 lg:p-20">
+          <img
+            src="https://images.unsplash.com/photo-1560472355-536de3962603?w=900&q=90"
+            alt="African business executives in modern boardroom"
+            loading="lazy"
+            className="relative w-full max-w-[520px] aspect-[4/3] object-cover"
+            style={{ boxShadow: "12px 12px 0 hsl(var(--gold))" }}
+          />
+        </div>
       </div>
     </section>
   );

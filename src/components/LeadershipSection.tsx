@@ -1,4 +1,4 @@
-import { Mail, Linkedin, User } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 import ceoPhoto from "@/assets/leader-ceo.png";
 
 const LeadershipSection = () => {
@@ -50,22 +50,23 @@ const LeadershipSection = () => {
           </div>
         </div>
 
-        <div className="mt-20 max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white border border-border p-6 text-center">
-                <div className="w-16 h-16 mx-auto rounded-full bg-muted flex items-center justify-center mb-4">
-                  <User size={28} className="text-midgray" />
-                </div>
-                <p className="text-midgray text-sm font-medium">Position Available</p>
-                <p className="text-midgray text-xs mt-1">Senior Leadership</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-midgray text-sm mt-8 font-light">
-            Evenor Holdings is assembling a world-class leadership team. Enquiries:{" "}
-            <a href="mailto:talent@evenor.co.za" className="text-gold hover:underline">talent@evenor.co.za</a>
+        <div className="mt-16 max-w-3xl mx-auto">
+          <p className="text-center italic font-light" style={{ color: "#6B7280", fontSize: "14px" }}>
+            Additional leadership profiles available upon request to credentialed counterparts.
           </p>
+        </div>
+      </div>
+
+      <div
+        className="relative mt-20 h-[320px] bg-cover bg-center"
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&q=85')" }}
+      >
+        <div className="absolute inset-0 bg-navy/80" />
+        <div className="relative h-full flex flex-col items-center justify-center text-center px-6 max-w-3xl mx-auto">
+          <p className="font-display italic text-white text-2xl md:text-[28px] leading-snug">
+            "The projects that transform nations are not won in tenders alone — they are earned in relationships, sustained by excellence, and delivered with unflinching commitment."
+          </p>
+          <p className="text-gold text-[13px] mt-4 font-normal">— Evenor Holdings, Corporate Charter 2024</p>
         </div>
       </div>
     </section>

@@ -43,8 +43,8 @@ const LeadershipSection = () => {
               <a href="#" className="flex items-center gap-2 text-navy hover:text-gold transition-colors text-sm">
                 <Linkedin size={16} /> LinkedIn
               </a>
-              <a href="mailto:joachimurio@evenor.co.za" className="flex items-center gap-2 text-navy hover:text-gold transition-colors text-sm">
-                <Mail size={16} /> joachimurio@evenor.co.za
+              <a href="mailto:joachim@evenor.org" className="flex items-center gap-2 text-navy hover:text-gold transition-colors text-sm">
+                <Mail size={16} /> joachim@evenor.org
               </a>
             </div>
           </div>

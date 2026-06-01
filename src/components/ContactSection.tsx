@@ -75,7 +75,7 @@ const ContactSection = () => {
           </div>
           <div className="flex items-center gap-3">
             <Mail size={18} className="text-gold flex-shrink-0" />
-            <a href="mailto:info@evenor.co.za" className="hover:text-gold transition-colors">info@evenor.co.za</a>
+            <a href="mailto:info@evenor.org" className="hover:text-gold transition-colors">info@evenor.org</a>
           </div>
           <div className="flex items-center gap-3">
             <Phone size={18} className="text-gold flex-shrink-0" />
@@ -83,7 +83,7 @@ const ContactSection = () => {
           </div>
           <div className="flex items-center gap-3">
             <Globe size={18} className="text-gold flex-shrink-0" />
-            <span>www.evenor.co.za</span>
+            <span>www.evenor.org</span>
           </div>
         </div>
       </div>

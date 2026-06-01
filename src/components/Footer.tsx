@@ -32,7 +32,7 @@ const Footer = () => {
         <div>
           <p className="text-white text-[11px] tracking-[0.2em] uppercase mb-4">Legal & Contact</p>
           <ul className="space-y-2 text-sm font-light">
-            <li><a href="mailto:info@evenor.co.za" className="hover:text-gold transition-colors">info@evenor.co.za</a></li>
+            <li><a href="mailto:info@evenor.org" className="hover:text-gold transition-colors">info@evenor.org</a></li>
             <li><a href="tel:+27815402781" className="hover:text-gold transition-colors">+27 81 540 2781</a></li>
             <li>Privacy Policy</li>
             <li>Terms of Engagement</li>
@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
 
       <div className="container-wide mt-12 pt-6 border-t flex flex-col md:flex-row justify-between gap-2 text-[12px] text-white/40" style={{ borderColor: "hsl(var(--navy-light))" }}>
-        <span>Evenor Holdings (Pty) Ltd — www.evenor.co.za</span>
+        <span>Evenor Holdings (Pty) Ltd — www.evenor.org</span>
         <span>Designed with purpose. Built for Africa.</span>
       </div>
     </footer>

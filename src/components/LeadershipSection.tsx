@@ -14,8 +14,9 @@ const LeadershipSection = () => {
 
         <div className="grid lg:grid-cols-[420px_1fr] gap-12 lg:gap-16 items-start max-w-6xl mx-auto">
           <div className="mx-auto lg:mx-0">
-            <div className="relative w-[280px] sm:w-[360px] lg:w-[420px] aspect-square overflow-hidden shadow-[0_20px_50px_-20px_rgba(11,37,69,0.4)] border-l-4 border-gold">
-              <img src={ceoPhoto} alt="Joachim Urio" className="w-full h-full object-cover" />
+            <div className="relative w-[280px] sm:w-[360px] lg:w-[420px] aspect-[4/5] overflow-hidden shadow-[0_20px_50px_-20px_rgba(11,37,69,0.4)] border-l-4 border-gold group">
+              <img src={ceoPhoto} alt="Joachim Urio, Founder & CEO of Evenor Holdings" className="w-full h-full object-cover object-[center_top] transition-transform duration-700 group-hover:scale-105" />
+              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
             </div>
             <div className="mt-6 text-center lg:text-left">
               <p className="text-navy font-semibold text-lg">Joachim Urio</p>
@@ -43,8 +44,8 @@ const LeadershipSection = () => {
               <a href="#" className="flex items-center gap-2 text-navy hover:text-gold transition-colors text-sm">
                 <Linkedin size={16} /> LinkedIn
               </a>
-              <a href="mailto:joachimurio@evenor.co.za" className="flex items-center gap-2 text-navy hover:text-gold transition-colors text-sm">
-                <Mail size={16} /> joachimurio@evenor.co.za
+              <a href="mailto:joachim@evenor.org" className="flex items-center gap-2 text-navy hover:text-gold transition-colors text-sm">
+                <Mail size={16} /> joachim@evenor.org
               </a>
             </div>
           </div>

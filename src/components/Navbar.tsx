@@ -3,10 +3,11 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "HOME", href: "#home" },
-  { label: "SECTORS", href: "#sectors" },
-  { label: "ABOUT", href: "#about" },
+  { label: "ABOUT", href: "#philosophy" },
+  { label: "SERVICES", href: "#sectors" },
+  { label: "INDUSTRIES", href: "#industries" },
   { label: "LEADERSHIP", href: "#leadership" },
-  { label: "PROJECTS", href: "#projects" },
+  { label: "PARTNERSHIPS", href: "#partners" },
   { label: "CONTACT", href: "#contact" },
 ];
 
@@ -28,7 +29,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-navy shadow-lg py-4" : "bg-transparent py-6"
+        scrolled ? "bg-navy shadow-lg py-4" : "bg-navy/30 backdrop-blur-sm py-6"
       }`}
     >
       <div className="container-wide flex items-center justify-between">
@@ -37,12 +38,12 @@ const Navbar = () => {
           <div className="h-[2px] w-10 bg-gold mt-1" />
         </button>
 
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden xl:flex items-center gap-7">
           {links.map((l) => (
             <button
               key={l.label}
               onClick={() => go(l.href)}
-              className="nav-underline text-white text-[12px] font-medium tracking-[0.18em]"
+              className="nav-underline text-white text-[11px] font-medium tracking-[0.2em]"
             >
               {l.label}
             </button>
@@ -52,7 +53,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <button onClick={() => setOpen(true)} className="lg:hidden text-white" aria-label="Open menu">
+        <button onClick={() => setOpen(true)} className="xl:hidden text-white" aria-label="Open menu">
           <Menu size={26} />
         </button>
       </div>
@@ -64,7 +65,7 @@ const Navbar = () => {
               <X size={28} />
             </button>
           </div>
-          <div className="flex-1 flex flex-col items-center justify-center gap-6">
+          <div className="flex-1 flex flex-col items-center justify-center gap-6 px-6">
             {links.map((l) => (
               <button
                 key={l.label}

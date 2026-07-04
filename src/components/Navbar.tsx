@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-type Link = { label: string; href: string; type: "route" | "hash" };
+type NavLink = { label: string; href: string; type: "route" | "hash" };
 
-const links: Link[] = [
+const links: NavLink[] = [
   { label: "HOME", href: "/", type: "route" },
   { label: "ABOUT", href: "/about", type: "route" },
   { label: "SERVICES", href: "#sectors", type: "hash" },

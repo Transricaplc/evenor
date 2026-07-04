@@ -29,7 +29,7 @@ const Navbar = () => {
 
   const onHome = pathname === "/";
 
-  const handleClick = (l: Link) => {
+  const handleClick = (l: NavLink) => {
     setOpen(false);
     if (l.type === "route") {
       navigate(l.href);

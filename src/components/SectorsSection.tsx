@@ -100,17 +100,25 @@ const SectorCard = ({
   desc,
   tags,
   index,
+  slug,
 }: {
   icon: any;
   name: string;
   desc: string;
   tags: string[];
   index: number;
+  slug: string;
 }) => {
   const { ref, seen } = useInView<HTMLDivElement>();
+  const navigate = useNavigate();
+  const goDeep = () => {
+    navigate(`/sectors/${slug}`);
+    window.scrollTo(0, 0);
+  };
   return (
     <div
       ref={ref}
+      onClick={goDeep}
       style={{
         transitionDelay: `${index * 90}ms`,
         opacity: seen ? 1 : 0,
@@ -152,10 +160,10 @@ const SectorCard = ({
         </div>
 
         <button
-          onClick={() => document.querySelector("#deepdive")?.scrollIntoView({ behavior: "smooth" })}
+          onClick={(e) => { e.stopPropagation(); goDeep(); }}
           className="inline-flex items-center gap-1.5 text-gold text-sm font-medium mt-5 self-start"
         >
-          <span className="border-b border-gold/0 group-hover:border-gold transition-all">Learn More</span>
+          <span className="border-b border-gold/0 group-hover:border-gold transition-all">Explore Sector</span>
           <ArrowUpRight size={14} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
         </button>
       </div>

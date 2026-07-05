@@ -1,32 +1,38 @@
 import { Truck, Network, Brain, Droplet, Mountain, ArrowUpRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const sectors = [
   {
+    slug: "logistics",
     icon: Truck,
     name: "LOGISTICS & SUPPLY CHAIN",
     desc: "End-to-end freight management, port logistics, last-mile distribution, cold-chain solutions, and cross-border corridor optimisation across Southern and East Africa. We move what matters — on time, every time.",
     tags: ["Freight", "Ports", "Cross-Border", "Cold-Chain"],
   },
   {
+    slug: "ict",
     icon: Network,
     name: "ICT INFRASTRUCTURE",
     desc: "Turnkey internet connectivity, fibre optic backbone deployment, enterprise networking, data centre fit-out, and smart port digitisation. From submarine cable landing stations to the last-mile access point.",
     tags: ["Fibre", "Data Centres", "Connectivity", "Smart Ports"],
   },
   {
+    slug: "consulting",
     icon: Brain,
     name: "MANAGEMENT CONSULTING",
     desc: "Strategic advisory, organisational design, public sector reform, regulatory navigation, and investment facilitation for governments, parastatals, and multinationals operating in complex African markets.",
     tags: ["Strategy", "Public Sector", "Investment", "Reform"],
   },
   {
+    slug: "petrochemicals",
     icon: Droplet,
     name: "PETROCHEMICALS SOLUTIONS",
     desc: "Petroleum product trading, fuel storage and distribution infrastructure, downstream supply chain management, and HSE-compliant facility engineering for refineries, terminals, and port fuel installations.",
     tags: ["Trading", "Storage", "Downstream", "HSE"],
   },
   {
+    slug: "mining",
     icon: Mountain,
     name: "MINING SOLUTIONS",
     desc: "Mineral processing advisory, mine-to-port logistics, tailings management, environmental compliance consulting, and technology integration for junior and mid-tier mining operations across Sub-Saharan Africa.",
@@ -94,17 +100,25 @@ const SectorCard = ({
   desc,
   tags,
   index,
+  slug,
 }: {
   icon: any;
   name: string;
   desc: string;
   tags: string[];
   index: number;
+  slug: string;
 }) => {
   const { ref, seen } = useInView<HTMLDivElement>();
+  const navigate = useNavigate();
+  const goDeep = () => {
+    navigate(`/sectors/${slug}`);
+    window.scrollTo(0, 0);
+  };
   return (
     <div
       ref={ref}
+      onClick={goDeep}
       style={{
         transitionDelay: `${index * 90}ms`,
         opacity: seen ? 1 : 0,
@@ -146,10 +160,10 @@ const SectorCard = ({
         </div>
 
         <button
-          onClick={() => document.querySelector("#deepdive")?.scrollIntoView({ behavior: "smooth" })}
+          onClick={(e) => { e.stopPropagation(); goDeep(); }}
           className="inline-flex items-center gap-1.5 text-gold text-sm font-medium mt-5 self-start"
         >
-          <span className="border-b border-gold/0 group-hover:border-gold transition-all">Learn More</span>
+          <span className="border-b border-gold/0 group-hover:border-gold transition-all">Explore Sector</span>
           <ArrowUpRight size={14} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
         </button>
       </div>

@@ -1,5 +1,6 @@
 import { Truck, Network, Brain, Droplet, Mountain, ArrowUpRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const sectors = [
   {

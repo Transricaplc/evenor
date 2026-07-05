@@ -17,12 +17,11 @@ const Footer = () => {
         <div>
           <p className="text-white text-[11px] tracking-[0.22em] uppercase mb-5">Services</p>
           <ul className="space-y-2.5 text-sm font-light">
-            <li><a href="#sectors" className="hover:text-gold transition-colors">Logistics & Supply Chain</a></li>
-            <li><a href="#sectors" className="hover:text-gold transition-colors">ICT Infrastructure</a></li>
-            <li><a href="#sectors" className="hover:text-gold transition-colors">Management Consulting</a></li>
-            <li><a href="#sectors" className="hover:text-gold transition-colors">Petrochemicals Solutions</a></li>
-            <li><a href="#sectors" className="hover:text-gold transition-colors">Mining Solutions</a></li>
-            <li><a href="#sectors" className="hover:text-gold transition-colors">Procurement & Supply</a></li>
+            <li><a href="/sectors/logistics" className="hover:text-gold transition-colors">Logistics & Supply Chain</a></li>
+            <li><a href="/sectors/ict" className="hover:text-gold transition-colors">ICT Infrastructure</a></li>
+            <li><a href="/sectors/consulting" className="hover:text-gold transition-colors">Management Consulting</a></li>
+            <li><a href="/sectors/petrochemicals" className="hover:text-gold transition-colors">Petrochemicals Solutions</a></li>
+            <li><a href="/sectors/mining" className="hover:text-gold transition-colors">Mining Solutions</a></li>
           </ul>
         </div>
 

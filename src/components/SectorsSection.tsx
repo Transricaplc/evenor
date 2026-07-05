@@ -4,30 +4,35 @@ import { useNavigate } from "react-router-dom";
 
 const sectors = [
   {
+    slug: "logistics",
     icon: Truck,
     name: "LOGISTICS & SUPPLY CHAIN",
     desc: "End-to-end freight management, port logistics, last-mile distribution, cold-chain solutions, and cross-border corridor optimisation across Southern and East Africa. We move what matters — on time, every time.",
     tags: ["Freight", "Ports", "Cross-Border", "Cold-Chain"],
   },
   {
+    slug: "ict",
     icon: Network,
     name: "ICT INFRASTRUCTURE",
     desc: "Turnkey internet connectivity, fibre optic backbone deployment, enterprise networking, data centre fit-out, and smart port digitisation. From submarine cable landing stations to the last-mile access point.",
     tags: ["Fibre", "Data Centres", "Connectivity", "Smart Ports"],
   },
   {
+    slug: "consulting",
     icon: Brain,
     name: "MANAGEMENT CONSULTING",
     desc: "Strategic advisory, organisational design, public sector reform, regulatory navigation, and investment facilitation for governments, parastatals, and multinationals operating in complex African markets.",
     tags: ["Strategy", "Public Sector", "Investment", "Reform"],
   },
   {
+    slug: "petrochemicals",
     icon: Droplet,
     name: "PETROCHEMICALS SOLUTIONS",
     desc: "Petroleum product trading, fuel storage and distribution infrastructure, downstream supply chain management, and HSE-compliant facility engineering for refineries, terminals, and port fuel installations.",
     tags: ["Trading", "Storage", "Downstream", "HSE"],
   },
   {
+    slug: "mining",
     icon: Mountain,
     name: "MINING SOLUTIONS",
     desc: "Mineral processing advisory, mine-to-port logistics, tailings management, environmental compliance consulting, and technology integration for junior and mid-tier mining operations across Sub-Saharan Africa.",

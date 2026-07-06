@@ -8,7 +8,7 @@ const links: NavLink[] = [
   { label: "HOME", href: "/", type: "route" },
   { label: "ABOUT", href: "/about", type: "route" },
   { label: "SERVICES", href: "#sectors", type: "hash" },
-  { label: "INDUSTRIES", href: "#industries", type: "hash" },
+  { label: "PROJECTS", href: "/projects", type: "route" },
   { label: "LEADERSHIP", href: "/leadership", type: "route" },
   { label: "PARTNERSHIPS", href: "#partners", type: "hash" },
   { label: "CONTACT", href: "#contact", type: "hash" },

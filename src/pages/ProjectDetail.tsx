@@ -70,7 +70,7 @@ const ProjectDetail = () => {
             <ul className="space-y-3">
               {project.scope.map((s) => (
                 <li key={s} className="flex gap-3 text-sm text-charcoal/85">
-                  <Check size={16} className="text-gold-dark mt-0.5 shrink-0" />
+                  <Check size={16} className="text-gold mt-0.5 shrink-0" />
                   <span>{s}</span>
                 </li>
               ))}
@@ -173,7 +173,7 @@ const ProjectDetail = () => {
             </h3>
             <p className="text-navy/80 mt-2">Speak to an Evenor principal — not a sales team.</p>
           </div>
-          <Link to="/#contact" className="btn-navy">Initiate Engagement</Link>
+          <Link to="/#contact" className="inline-flex items-center gap-2 bg-navy text-white px-6 py-3 text-sm font-semibold tracking-wider uppercase hover:bg-navy-deep transition-colors">Initiate Engagement</Link>
         </div>
       </section>
 

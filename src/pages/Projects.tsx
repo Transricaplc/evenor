@@ -126,7 +126,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="font-display text-navy text-xl font-bold leading-snug mb-3 group-hover:text-gold-dark transition-colors">
+                <h3 className="font-display text-navy text-xl font-bold leading-snug mb-3 group-hover:text-gold transition-colors">
                   {p.title}
                 </h3>
                 <p className="text-charcoal/70 text-sm font-light leading-relaxed mb-5 line-clamp-3">
@@ -136,7 +136,7 @@ const Projects = () => {
                   <span className="text-navy/60 text-[11px] tracking-[0.16em] uppercase font-semibold">
                     {p.client}
                   </span>
-                  <span className="inline-flex items-center gap-1 text-navy text-[11px] tracking-[0.16em] uppercase font-bold group-hover:text-gold-dark">
+                  <span className="inline-flex items-center gap-1 text-navy text-[11px] tracking-[0.16em] uppercase font-bold group-hover:text-gold">
                     Case Brief <ArrowUpRight size={14} />
                   </span>
                 </div>

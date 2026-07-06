@@ -30,8 +30,8 @@ const Footer = () => {
           <p className="text-white text-[11px] tracking-[0.22em] uppercase mb-5">Company</p>
           <ul className="space-y-2.5 text-sm font-light">
             <li><a href="#philosophy" className="hover:text-gold transition-colors">About Evenor</a></li>
-            <li><a href="#leadership" className="hover:text-gold transition-colors">Leadership</a></li>
-            <li><a href="#industries" className="hover:text-gold transition-colors">Industries Served</a></li>
+            <li><a href="/leadership" className="hover:text-gold transition-colors">Leadership</a></li>
+            <li><a href="/projects" className="hover:text-gold transition-colors">Projects & Portfolio</a></li>
             <li><a href="#partners" className="hover:text-gold transition-colors">Partnerships</a></li>
             <li><a href="#contact" className="hover:text-gold transition-colors">Investor Relations</a></li>
             <li><a href="#contact" className="hover:text-gold transition-colors">Tender Opportunities</a></li>

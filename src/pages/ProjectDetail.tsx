@@ -20,6 +20,22 @@ const ProjectDetail = () => {
 
   return (
     <div className="min-h-screen bg-offwhite">
+      <Seo
+        title={`${project.title} | ${project.sector} | Evenor Holdings`}
+        description={project.summary}
+        image={project.image}
+        type="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: project.title,
+          about: project.sector,
+          locationCreated: project.country,
+          dateCreated: project.year,
+          creator: { "@type": "Organization", name: "Evenor Holdings (Pty) Ltd" },
+          description: project.summary,
+        }}
+      />
       <PageProgressBar />
       <Navbar />
 

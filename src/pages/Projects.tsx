@@ -26,6 +26,10 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen bg-offwhite">
+      <Seo
+        title="Projects & Portfolio | Evenor Holdings | Case Studies Across Africa"
+        description="Selected engagements from Evenor Holdings — corridor logistics, national fibre backbones, public-sector digital transformation, coastal fuel terminals and mine-to-port optimisation."
+      />
       <PageProgressBar />
       <Navbar />
 

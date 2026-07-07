@@ -18,6 +18,19 @@ const Sector = () => {
 
   return (
     <div className="min-h-screen bg-offwhite">
+      <Seo
+        title={`${sector.nav} | Evenor Holdings`}
+        description={sector.intro[0]?.slice(0, 200) ?? sector.title}
+        image={sector.heroImage}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: sector.nav,
+          provider: { "@type": "Organization", name: "Evenor Holdings (Pty) Ltd", url: "https://www.evenor.org" },
+          areaServed: "Sub-Saharan Africa",
+          description: sector.intro[0],
+        }}
+      />
       <PageProgressBar />
       <Navbar />
 

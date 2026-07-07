@@ -8,6 +8,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import PageProgressBar from "@/components/PageProgressBar";
 import CookieConsent from "@/components/CookieConsent";
 import PageHero from "@/components/PageHero";
+import Seo from "@/components/Seo";
 
 const values = [
   "Integrity",
@@ -52,6 +53,10 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-offwhite">
+      <Seo
+        title="About Evenor Holdings | Continental Vision, Institutional Discipline"
+        description="Discover Evenor Holdings — mission, values, continental presence across South Africa, Tanzania, Kenya, Zambia, DRC, Rwanda and Uganda, and our corporate history from 2021 to today."
+      />
       <PageProgressBar />
       <Navbar />
 

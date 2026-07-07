@@ -8,6 +8,7 @@ import PageProgressBar from "@/components/PageProgressBar";
 import CookieConsent from "@/components/CookieConsent";
 import PageHero from "@/components/PageHero";
 import ceoPhoto from "@/assets/leader-ceo.png";
+import Seo from "@/components/Seo";
 
 const governance = [
   {
@@ -48,6 +49,19 @@ const Leadership = () => {
 
   return (
     <div className="min-h-screen bg-offwhite">
+      <Seo
+        title="Leadership & Governance | Evenor Holdings | Joachim Urio, Founder & CEO"
+        description="Meet Joachim Urio, Founder & CEO of Evenor Holdings, and read our governance framework: principal-led engagement, regulatory standing, advisory council and corporate charter."
+        type="profile"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Joachim Urio",
+          jobTitle: "Founder & Chief Executive Officer",
+          worksFor: { "@type": "Organization", name: "Evenor Holdings (Pty) Ltd" },
+          email: "joachim@evenor.org",
+        }}
+      />
       <PageProgressBar />
       <Navbar />
 

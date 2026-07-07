@@ -8,6 +8,7 @@ import PageProgressBar from "@/components/PageProgressBar";
 import CookieConsent from "@/components/CookieConsent";
 import PageHero from "@/components/PageHero";
 import ceoPhoto from "@/assets/leader-ceo.png";
+import Seo from "@/components/Seo";
 
 const governance = [
   {

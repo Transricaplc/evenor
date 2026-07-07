@@ -7,6 +7,7 @@ import PageProgressBar from "@/components/PageProgressBar";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageHero from "@/components/PageHero";
 import { projects, sectorFilters } from "@/data/projects";
+import Seo from "@/components/Seo";
 
 const statusColor: Record<string, string> = {
   "Delivered": "bg-emerald-500/15 text-emerald-300 border-emerald-500/30",

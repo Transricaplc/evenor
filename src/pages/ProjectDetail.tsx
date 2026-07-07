@@ -6,6 +6,7 @@ import PageProgressBar from "@/components/PageProgressBar";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageHero from "@/components/PageHero";
 import { projects } from "@/data/projects";
+import Seo from "@/components/Seo";
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();

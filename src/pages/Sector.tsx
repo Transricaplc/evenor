@@ -6,6 +6,7 @@ import PageProgressBar from "@/components/PageProgressBar";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageHero from "@/components/PageHero";
 import { getSector, sectors } from "@/data/sectors";
+import Seo from "@/components/Seo";
 
 const Sector = () => {
   const { slug } = useParams<{ slug: string }>();

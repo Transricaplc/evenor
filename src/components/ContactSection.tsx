@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+import { IMG } from "@/assets/images";
 
 const ROUTING: Record<string, string> = {
   General: "support@evenor.org",
@@ -120,7 +121,7 @@ const ContactSection = () => {
             className="hidden lg:flex relative bg-cover bg-center min-h-full border-r-4 border-gold flex-col justify-end p-10 text-white"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1542744094-24638eff58bb?w=800&q=85')",
+                `url(${IMG.boardroom})`,
             }}
           >
             <div className="absolute inset-0 bg-navy/60" />

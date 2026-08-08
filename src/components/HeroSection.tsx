@@ -1,25 +1,26 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Truck, Network, Brain, Droplet, Mountain, Package } from "lucide-react";
+import { IMG } from "@/assets/images";
 
 const slides = [
   {
     image:
-      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&q=90",
+      IMG.port,
     eyebrow: "Cape Town · Johannesburg · Dar es Salaam · Nairobi",
     title: ["Building the Infrastructure", "Africa Deserves."],
     body: "A South African-headquartered industrial and technology conglomerate delivering turnkey solutions across Logistics, ICT, Consulting, Petrochemicals, Mining and Procurement — under a single mandate:",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=90",
+      IMG.corridor,
     eyebrow: "Multi-Sector · Continental Reach · Institutional Grade",
     title: ["Engineered for Governments,", "Trusted by Enterprise."],
     body: "From national fibre backbones to port logistics, Evenor Holdings delivers projects that meet the standards of governments, parastatals and Tier-1 institutions across Sub-Saharan Africa —",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=90",
+      IMG.port,
     eyebrow: "Turnkey Delivery · Strategic Partnerships · Long-Term Capital",
     title: ["A Principal-Led,", "Long-View Conglomerate."],
     body: "We do not chase transactions. Evenor Holdings partners with governments, OEMs and institutional capital on the infrastructure that will define the next century of African growth —",

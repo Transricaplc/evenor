@@ -1,5 +1,8 @@
 import { IMG } from "@/assets/images";
+import OperationsMap from "@/components/OperationsMap";
+
 const partners = [
+
   "SinoConnect Infrastructure", "FNB Corporate Banking", "SEACOM Subsea", "Tanzania Ports Authority",
   "Vodacom Business", "SADC Trade Facilitation", "TCRA — Tanzania", "Lovable (Technology Partner)",
 ];

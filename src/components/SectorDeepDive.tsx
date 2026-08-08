@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
+import { IMG } from "@/assets/images";
 
 const tabs = [
   {
@@ -18,7 +19,7 @@ const tabs = [
       "Fleet telematics & supply chain digitisation",
       "SADC & EAC corridor trade facilitation",
     ],
-    img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=85",
+    img: IMG.port,
   },
   {
     key: "ict",
@@ -37,7 +38,7 @@ const tabs = [
       "TCRA-compliant network registration & licensing",
       "24/7 managed services & network monitoring",
     ],
-    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=700&q=85",
+    img: IMG.ict,
   },
   {
     key: "consulting",
@@ -56,7 +57,7 @@ const tabs = [
       "Digital transformation roadmapping",
       "Tender documentation & proposal engineering",
     ],
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&q=85",
+    img: IMG.boardroom,
   },
   {
     key: "petro",
@@ -75,7 +76,7 @@ const tabs = [
       "Energy regulatory navigation & licensing",
       "Bunker fuel solutions for port operators",
     ],
-    img: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=700&q=85",
+    img: IMG.petrochem,
   },
   {
     key: "mining",
@@ -94,7 +95,7 @@ const tabs = [
       "Community & social impact frameworks (ESIA)",
       "Beneficiation strategy & value-addition advisory",
     ],
-    img: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=700&q=85",
+    img: IMG.mining,
   },
 ];
 
@@ -164,9 +165,9 @@ const SectorDeepDive = () => {
 
       <div className="grid grid-cols-3 mt-16">
         {[
-          "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=640&q=80",
-          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=640&q=80",
-          "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=640&q=80",
+          IMG.corridor,
+          IMG.ict,
+          IMG.mining,
         ].map((src, i) => (
           <div key={i} className="overflow-hidden h-[200px] md:h-[280px]">
             <img

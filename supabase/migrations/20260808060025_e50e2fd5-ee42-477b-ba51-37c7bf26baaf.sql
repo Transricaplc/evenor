@@ -1,0 +1,1 @@
+REVOKE EXECUTE ON FUNCTION public.set_contact_routing() FROM PUBLIC, anon, authenticated;

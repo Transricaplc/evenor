@@ -1,32 +1,33 @@
 import { useEffect, useRef, useState } from "react";
+import { IMG } from "@/assets/images";
 
 const cards = [
   {
-    img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=85",
+    img: IMG.port,
     tag: "LOGISTICS & SUPPLY CHAIN",
     title: "Port-to-Hinterland Freight Orchestration",
     body: "Full-corridor logistics management from port gate to final destination — customs clearance, bonded warehousing, multimodal freight, and last-mile distribution engineered for Southern and East African trade routes.",
   },
   {
-    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=85",
+    img: IMG.ict,
     tag: "ICT INFRASTRUCTURE",
     title: "National-Scale Connectivity Engineering",
     body: "Turnkey fibre optic backbone deployment, enterprise core networking, internet gateway commissioning, and Wi-Fi 6 coverage for ports, campuses, and government facilities — designed to ITU-T, TIA-568, and TCRA standards. Executed with Tier-1 EPCC partners.",
   },
   {
-    img: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&q=85",
+    img: IMG.capetown,
     tag: "MANAGEMENT CONSULTING",
     title: "Boardroom-to-Implementation Advisory",
     body: "Strategic counsel for governments, parastatals, and multinationals navigating African regulatory complexity — from RFQ structuring and PPP design to institutional reform and digital transformation roadmapping. Principal-level engagement guaranteed.",
   },
   {
-    img: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&q=85",
+    img: IMG.petrochem,
     tag: "PETROCHEMICALS SOLUTIONS",
     title: "Downstream Energy Infrastructure",
     body: "Petroleum product procurement, fuel storage terminal commissioning, downstream distribution network design, and HSE-compliant facility engineering for refineries, port installations, and industrial fuel facilities across East and Southern Africa.",
   },
   {
-    img: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=85",
+    img: IMG.mining,
     tag: "MINING SOLUTIONS",
     title: "Mine-to-Market Value Chain Delivery",
     body: "Operational efficiency advisory, environmental compliance engineering, mineral processing technology integration, and mine-to-port logistics optimisation for junior and mid-tier operators — aligned to national Mining Commission frameworks.",

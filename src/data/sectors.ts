@@ -1,3 +1,4 @@
+import { IMG } from "@/assets/images";
 export type SectorContent = {
   slug: string;
   nav: string;
@@ -27,7 +28,7 @@ export const sectors: SectorContent[] = [
     eyebrow: "Sector 01 — Logistics & Supply Chain",
     title: "Moving Africa's Economy Forward.",
     heroImage:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1800&q=85",
+      IMG.port,
     intro: [
       "Evenor Holdings' Logistics division delivers integrated supply chain solutions engineered specifically for Sub-Saharan Africa's corridor economics. From bonded warehousing at Dar es Salaam and Durban to last-mile distribution in Nairobi's peri-urban belt, we build the physical and digital backbone that lets commodities, containers, and consumer goods move at the speed the continent demands.",
       "We operate at the intersection of Port Authorities, National Roads Agencies, Revenue Authorities and private cargo owners — reducing dwell time, digitising documentation, and structuring corridor solutions that hold up under regulatory scrutiny and commercial pressure alike.",
@@ -95,7 +96,7 @@ export const sectors: SectorContent[] = [
       outcome:
         "Dwell time cut from 11 days to 4. Documentation cycle reduced by 62%. Full corridor visibility delivered to the client's ERP within 90 days of mobilisation.",
       image:
-        "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1400&q=85",
+        IMG.corridor,
     },
     cta: "Discuss a logistics mandate",
   },
@@ -105,7 +106,7 @@ export const sectors: SectorContent[] = [
     eyebrow: "Sector 02 — ICT Infrastructure",
     title: "Engineering Connectivity at National Scale.",
     heroImage:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1800&q=85",
+      IMG.ict,
     intro: [
       "In an era where digital infrastructure is as foundational as roads and power, Evenor Holdings delivers turnkey ICT solutions capable of transforming ports, government campuses, and industrial zones into digitally sovereign operational environments.",
       "Our technical delivery is executed through SinoConnect Infrastructure Solutions Ltd (Shenzhen), one of the most experienced port ICT EPCC contractors serving African infrastructure, under Evenor's prime contract responsibility. We manage the full lifecycle: design, procurement, civil works, installation, commissioning, and post-warranty managed services — all under a single accountable entity.",
@@ -164,7 +165,7 @@ export const sectors: SectorContent[] = [
       outcome:
         "Design endorsed by port ICT committee. Skills-transfer framework agreed with local university. Positioning secured as prime EPCC contractor for the modernisation programme.",
       image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1400&q=85",
+        IMG.ict,
     },
     partners: ["SinoConnect Infrastructure Solutions Ltd (Shenzhen)"],
     cta: "Scope an ICT infrastructure programme",
@@ -175,7 +176,7 @@ export const sectors: SectorContent[] = [
     eyebrow: "Sector 03 — Management Consulting",
     title: "Strategy Built for African Complexity.",
     heroImage:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1800&q=85",
+      IMG.boardroom,
     intro: [
       "African markets do not respond to generic frameworks. The political economy of infrastructure delivery, the layered decision-making architecture of state-owned enterprises, and the trust dynamics that govern public-private partnerships on this continent demand advisors who have operated inside these systems — not merely studied them.",
       "Evenor Holdings' consulting practice brings together expertise in public sector reform, regulatory strategy, investment facilitation, organisational turnaround, and digital transformation advisory. Our principals engage at Principal Secretary, Director General, and Board level — structuring interventions that create durable, measurable improvement in institutional performance.",
@@ -234,7 +235,7 @@ export const sectors: SectorContent[] = [
       outcome:
         "Roadmap adopted by portfolio Minister. Governance charter revised. Follow-on mandate secured for implementation oversight.",
       image:
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1400&q=85",
+        IMG.boardroom,
     },
     cta: "Commission a consulting mandate",
   },
@@ -244,7 +245,7 @@ export const sectors: SectorContent[] = [
     eyebrow: "Sector 04 — Petrochemicals Solutions",
     title: "Downstream Energy. Upstream Ambition.",
     heroImage:
-      "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1800&q=85",
+      IMG.petrochem,
     intro: [
       "Africa's hydrocarbon economy is entering its most consequential decade — with new offshore discoveries, growing refinery capacity, and the urgent infrastructure requirement to distribute refined products across vast, underserved hinterlands. Evenor Holdings is positioned to serve this moment.",
       "Our Petrochemicals division provides petroleum product procurement and trading, fuel storage terminal design and commissioning, downstream distribution network engineering, and HSE compliance consulting for port fuel installations, storage farms, and industrial fuel facilities. We interface directly with National Energy Regulators, Petroleum Authorities, and Port Fuel Committees across East and Southern Africa.",
@@ -303,7 +304,7 @@ export const sectors: SectorContent[] = [
       outcome:
         "Terminal concept endorsed by regulator. Environmental authorisation pathway secured. Positioned as advisor of record through commissioning.",
       image:
-        "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=1400&q=85",
+        IMG.petrochem,
     },
     cta: "Explore a petrochemicals mandate",
   },
@@ -313,7 +314,7 @@ export const sectors: SectorContent[] = [
     eyebrow: "Sector 05 — Mining Solutions",
     title: "Precision Engineering for Africa's Mineral Wealth.",
     heroImage:
-      "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1800&q=85",
+      IMG.mining,
     intro: [
       "Sub-Saharan Africa holds an estimated 30% of the world's mineral reserves — yet value capture remains chronically underoptimised. Evenor Holdings' Mining Solutions division works with junior and mid-tier mining operators, national mining commissions, and mineral export authorities to bridge the gap between resource endowment and operational excellence.",
       "We deploy expertise across the mine-to-port value chain: operational efficiency advisory, environmental compliance engineering, processing technology integration, tailings management systems, and the mine logistics infrastructure required to move ore to market reliably and profitably.",
@@ -372,7 +373,7 @@ export const sectors: SectorContent[] = [
       outcome:
         "Corridor cost-per-tonne reduced by 22%. Offtake negotiation supported to conclusion. ESIA framework accepted by local regulator.",
       image:
-        "https://images.unsplash.com/photo-1552862750-746b9805ec1a?w=1400&q=85",
+        IMG.mining,
     },
     cta: "Discuss a mining mandate",
   },

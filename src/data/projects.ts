@@ -1,3 +1,4 @@
+import { IMG } from "@/assets/images";
 export type Project = {
   slug: string;
   title: string;
@@ -30,7 +31,7 @@ export const projects: Project[] = [
     status: "In Execution",
     value: "USD 14M annualised throughput",
     image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1800&q=85",
+      IMG.port,
     summary:
       "End-to-end corridor management from port gate to Lubumbashi and Ndola — customs, bonded warehousing, multimodal freight, and real-time cargo visibility.",
     scope: [
@@ -69,7 +70,7 @@ export const projects: Project[] = [
     status: "In Execution",
     value: "Tier-1 EPCC subcontract",
     image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1800&q=85",
+      IMG.ict,
     summary:
       "Design, supply and commissioning of a metropolitan fibre ring interconnecting government data centres, parastatal HQs, and two international submarine cable landing points.",
     scope: [
@@ -106,7 +107,7 @@ export const projects: Project[] = [
     year: "2024 – 2025",
     status: "Delivered",
     image:
-      "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=1800&q=85",
+      IMG.capetown,
     summary:
       "36-week advisory mandate covering operating model redesign, ICT modernisation blueprint, and treasury-approved 5-year capex framework for a state-owned enterprise.",
     scope: [
@@ -144,7 +145,7 @@ export const projects: Project[] = [
     status: "Framework Agreement",
     value: "40,000 m³ capacity",
     image:
-      "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1800&q=85",
+      IMG.petrochem,
     summary:
       "HSE-compliant commissioning of a coastal petroleum products terminal — storage tanks, transfer manifolds, jetty interface, and fire-safety systems.",
     scope: [
@@ -181,7 +182,7 @@ export const projects: Project[] = [
     year: "2024 – 2025",
     status: "Delivered",
     image:
-      "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1800&q=85",
+      IMG.mining,
     summary:
       "Full mine-gate-to-vessel value chain redesign — haul contracts, siding utilisation, port slot booking, and vessel nomination for a copper concentrate producer.",
     scope: [
@@ -218,7 +219,7 @@ export const projects: Project[] = [
     year: "2024",
     status: "Delivered",
     image:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1800&q=85",
+      IMG.mining,
     summary:
       "Turnkey enterprise networking and Wi-Fi 6 coverage across a 240-hectare port campus — administration, gate complex, container yard, and marine offices.",
     scope: [

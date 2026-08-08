@@ -1,5 +1,6 @@
 import { Mail, Linkedin } from "lucide-react";
 import ceoPhoto from "@/assets/leader-ceo.png";
+import { IMG } from "@/assets/images";
 
 const LeadershipSection = () => {
   return (
@@ -60,7 +61,7 @@ const LeadershipSection = () => {
 
       <div
         className="relative mt-20 h-[320px] bg-cover bg-center"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&q=85')" }}
+        style={{ backgroundImage: `url(${IMG.capetown})` }}
       >
         <div className="absolute inset-0 bg-navy/80" />
         <div className="relative h-full flex flex-col items-center justify-center text-center px-6 max-w-3xl mx-auto">

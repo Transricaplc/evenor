@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { IMG } from "@/assets/images";
 
 const WhyEvenorSection = () => {
   return (
@@ -36,7 +37,7 @@ const WhyEvenorSection = () => {
 
         <div className="relative flex items-center justify-center p-8 lg:p-20">
           <img
-            src="https://images.unsplash.com/photo-1560472355-536de3962603?w=900&q=90"
+            src={IMG.boardroom}
             alt="African business executives in modern boardroom"
             loading="lazy"
             className="relative w-full max-w-[520px] aspect-[4/3] object-cover"

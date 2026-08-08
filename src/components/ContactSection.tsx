@@ -74,8 +74,8 @@ const ContactSection = () => {
       email: parsed.data.email,
       phone: parsed.data.phone || null,
       message: parsed.data.message,
-      routed_to: ROUTING[parsed.data.enquiry_type] ?? "support@evenor.org",
     });
+
     setLoading(false);
 
     if (error) {

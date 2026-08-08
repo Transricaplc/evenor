@@ -38,7 +38,7 @@ const Projects = () => {
         eyebrow="Portfolio — Representative Engagements"
         title="Delivered. In Execution. Under Framework."
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Projects" }]}
-        image=IMG.corridor
+        image={IMG.corridor}
         height="60vh"
       />
 

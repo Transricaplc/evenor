@@ -66,7 +66,7 @@ const About = () => {
           eyebrow="Who We Are"
           title="A Continental Standard, Held Without Compromise."
           breadcrumb={[{ label: "Home", href: "/" }, { label: "About" }]}
-          image=IMG.boardroom
+          image={IMG.boardroom}
         />
 
         {/* Company Overview */}

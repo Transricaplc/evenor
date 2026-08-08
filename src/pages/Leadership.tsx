@@ -71,7 +71,7 @@ const Leadership = () => {
           eyebrow="Leadership"
           title="The Vision Behind the Work."
           breadcrumb={[{ label: "Home", href: "/" }, { label: "Leadership" }]}
-          image=IMG.boardroom
+          image={IMG.boardroom}
         />
 
         {/* CEO Full Profile */}

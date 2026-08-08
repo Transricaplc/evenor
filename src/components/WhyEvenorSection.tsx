@@ -37,7 +37,7 @@ const WhyEvenorSection = () => {
 
         <div className="relative flex items-center justify-center p-8 lg:p-20">
           <img
-            src=IMG.boardroom
+            src={IMG.boardroom}
             alt="African business executives in modern boardroom"
             loading="lazy"
             className="relative w-full max-w-[520px] aspect-[4/3] object-cover"

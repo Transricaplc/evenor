@@ -8,6 +8,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import PageHero from "@/components/PageHero";
 import { projects, sectorFilters } from "@/data/projects";
 import Seo from "@/components/Seo";
+import { IMG } from "@/assets/images";
 
 const statusColor: Record<string, string> = {
   "Delivered": "bg-emerald-500/15 text-emerald-300 border-emerald-500/30",
@@ -37,7 +38,7 @@ const Projects = () => {
         eyebrow="Portfolio — Representative Engagements"
         title="Delivered. In Execution. Under Framework."
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Projects" }]}
-        image="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1800&q=85"
+        image=IMG.corridor
         height="60vh"
       />
 

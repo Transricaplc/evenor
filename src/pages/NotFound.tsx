@@ -4,6 +4,7 @@ import { ArrowLeft, Home, Compass } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Seo from "@/components/Seo";
+import { IMG } from "@/assets/images";
 
 const NotFound = () => {
   const location = useLocation();
@@ -26,7 +27,7 @@ const NotFound = () => {
           className="absolute inset-0 opacity-25 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1800&q=85')",
+              `url(${IMG.capetown})`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/90 to-navy-deep" />

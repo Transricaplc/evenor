@@ -1,3 +1,4 @@
+import { IMG } from "@/assets/images";
 const partners = [
   "SinoConnect Infrastructure", "FNB Corporate Banking", "SEACOM Subsea", "Tanzania Ports Authority",
   "Vodacom Business", "SADC Trade Facilitation", "TCRA — Tanzania", "Lovable (Technology Partner)",
@@ -9,7 +10,7 @@ const PartnersSection = () => {
       <div
         className="absolute inset-0 bg-cover bg-center pointer-events-none"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0?w=1920&q=80')",
+          backgroundImage: `url(${IMG.corridor})`,
           opacity: 0.08,
         }}
         aria-hidden

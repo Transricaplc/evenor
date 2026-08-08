@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { IMG } from "@/assets/images";
 
 const stats = [
   { value: "12+", label: "Countries Active", numeric: true },
@@ -73,7 +74,7 @@ const PhilosophySection = () => {
         <div className="h-[2px] bg-gold w-full" />
         <div
           className="h-[320px] md:h-[480px] bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=90')" }}
+          style={{ backgroundImage: `url(${IMG.boardroom})` }}
           aria-hidden
         />
         <div className="h-[2px] bg-gold w-full" />

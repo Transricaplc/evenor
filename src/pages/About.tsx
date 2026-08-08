@@ -9,6 +9,7 @@ import PageProgressBar from "@/components/PageProgressBar";
 import CookieConsent from "@/components/CookieConsent";
 import PageHero from "@/components/PageHero";
 import Seo from "@/components/Seo";
+import { IMG } from "@/assets/images";
 
 const values = [
   "Integrity",
@@ -65,7 +66,7 @@ const About = () => {
           eyebrow="Who We Are"
           title="A Continental Standard, Held Without Compromise."
           breadcrumb={[{ label: "Home", href: "/" }, { label: "About" }]}
-          image="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=90"
+          image=IMG.boardroom
         />
 
         {/* Company Overview */}
@@ -236,7 +237,7 @@ const About = () => {
         {/* Leadership Teaser */}
         <section
           className="relative py-24 md:py-32 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1573167507387-6b4b98cb7c13?w=1920&q=85')" }}
+          style={{ backgroundImage: `url(${IMG.boardroom})` }}
         >
           <div className="absolute inset-0 bg-navy/85" />
           <div className="relative container-wide text-center max-w-3xl mx-auto text-white">

@@ -9,6 +9,7 @@ import CookieConsent from "@/components/CookieConsent";
 import PageHero from "@/components/PageHero";
 import ceoPhoto from "@/assets/leader-ceo.png";
 import Seo from "@/components/Seo";
+import { IMG } from "@/assets/images";
 
 const governance = [
   {
@@ -70,7 +71,7 @@ const Leadership = () => {
           eyebrow="Leadership"
           title="The Vision Behind the Work."
           breadcrumb={[{ label: "Home", href: "/" }, { label: "Leadership" }]}
-          image="https://images.unsplash.com/photo-1573167507387-6b4b98cb7c13?w=1920&q=90"
+          image=IMG.boardroom
         />
 
         {/* CEO Full Profile */}
@@ -196,7 +197,7 @@ const Leadership = () => {
         {/* Closing quote band */}
         <section
           className="relative py-24 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&q=85')" }}
+          style={{ backgroundImage: `url(${IMG.capetown})` }}
         >
           <div className="absolute inset-0 bg-navy/85" />
           <div className="relative container-wide max-w-3xl mx-auto text-center text-white">

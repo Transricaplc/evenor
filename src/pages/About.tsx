@@ -9,6 +9,8 @@ import PageProgressBar from "@/components/PageProgressBar";
 import CookieConsent from "@/components/CookieConsent";
 import PageHero from "@/components/PageHero";
 import Seo from "@/components/Seo";
+import OperationsMap from "@/components/OperationsMap";
+
 import { IMG } from "@/assets/images";
 
 const values = [
@@ -168,6 +170,18 @@ const About = () => {
                 Anchored in South Africa, operationally embedded in East Africa, and mandated across the corridors that move African commerce.
               </p>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="max-w-6xl mx-auto mb-12"
+            >
+              <OperationsMap />
+            </motion.div>
+
+
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
               {presence.map((p, i) => (

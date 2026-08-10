@@ -53,7 +53,7 @@ const LeadershipSection = () => {
         </div>
 
         <div className="mt-16 max-w-3xl mx-auto">
-          <p className="text-center italic font-light" style={{ color: "#6B7280", fontSize: "14px" }}>
+          <p className="text-center italic font-light" style={{ color: "hsl(var(--charcoal) / 0.8)", fontSize: "14px" }}>
             Additional leadership profiles available upon request to credentialed counterparts.
           </p>
         </div>

@@ -113,28 +113,45 @@ const SectorDeepDive = () => {
           </h2>
         </div>
 
-        <div className="hidden md:flex justify-center gap-10 border-b border-navy/10 mb-12">
+        <div
+          className="hidden md:flex justify-center gap-10 border-b border-navy/10 mb-12"
+          role="tablist"
+          aria-label="Sector intelligence"
+        >
           {tabs.map((x) => (
             <button
               key={x.key}
+              id={`tab-${x.key}`}
+              role="tab"
+              aria-selected={active === x.key}
+              aria-controls={`panel-${x.key}`}
+              tabIndex={active === x.key ? 0 : -1}
               onClick={() => setActive(x.key)}
-              className={`pb-4 text-sm tracking-[0.15em] uppercase transition-colors relative ${
-                active === x.key ? "text-navy font-semibold" : "text-midgray hover:text-navy"
+              className={`pb-4 text-sm tracking-[0.15em] uppercase transition-colors relative min-h-11 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
+                active === x.key ? "text-navy font-semibold" : "text-charcoal/70 hover:text-navy"
               }`}
             >
               {x.label}
-              {active === x.key && <span className="absolute left-0 right-0 -bottom-px h-[3px] bg-gold" />}
+              {active === x.key && <span aria-hidden="true" className="absolute left-0 right-0 -bottom-px h-[3px] bg-gold" />}
             </button>
           ))}
         </div>
 
-        <div className="md:hidden flex flex-col gap-2 mb-8">
+        <div
+          className="md:hidden flex flex-col gap-2 mb-8"
+          role="tablist"
+          aria-label="Sector intelligence"
+        >
           {tabs.map((x) => (
             <button
               key={x.key}
+              id={`m-tab-${x.key}`}
+              role="tab"
+              aria-selected={active === x.key}
+              aria-controls={`panel-${x.key}`}
               onClick={() => setActive(x.key)}
-              className={`text-left px-4 py-3 border-l-4 transition-colors ${
-                active === x.key ? "border-gold bg-white text-navy font-semibold" : "border-transparent text-midgray"
+              className={`text-left px-4 py-3 min-h-11 border-l-4 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
+                active === x.key ? "border-gold bg-white text-navy font-semibold" : "border-transparent text-charcoal/75"
               }`}
             >
               {x.label.toUpperCase()}
@@ -142,7 +159,14 @@ const SectorDeepDive = () => {
           ))}
         </div>
 
-        <div key={t.key} className="grid lg:grid-cols-[1.2fr_1fr] gap-10 animate-fade-in">
+        <div
+          key={t.key}
+          id={`panel-${t.key}`}
+          role="tabpanel"
+          aria-labelledby={`tab-${t.key}`}
+          tabIndex={0}
+          className="grid lg:grid-cols-[1.2fr_1fr] gap-10 animate-fade-in"
+        >
           <div>
             <h3 className="font-display text-navy text-2xl md:text-3xl font-bold mb-6">{t.h3}</h3>
             <div className="space-y-4 text-charcoal/80 font-light leading-[1.85] text-[15px] md:text-base">
@@ -151,7 +175,7 @@ const SectorDeepDive = () => {
             <div className="mt-8 grid sm:grid-cols-2 gap-3">
               {t.caps.map((c) => (
                 <div key={c} className="flex items-start gap-2.5">
-                  <Check size={16} className="text-gold mt-1 flex-shrink-0" strokeWidth={2.5} />
+                  <Check size={16} aria-hidden="true" className="text-gold mt-1 flex-shrink-0" strokeWidth={2.5} />
                   <span className="text-charcoal/85 text-sm font-light">{c}</span>
                 </div>
               ))}
@@ -161,6 +185,7 @@ const SectorDeepDive = () => {
             <img src={t.img} alt={t.h3} loading="lazy" className="w-full h-full max-h-[520px] object-cover shadow-lg" />
           </div>
         </div>
+
       </div>
 
       <div className="grid grid-cols-3 mt-16">

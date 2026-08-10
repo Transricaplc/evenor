@@ -12,6 +12,8 @@
     --navy-light: 216 60% 26%;       /* #1B3A6B */
     --gold: 43 56% 54%;              /* #C9A84C */
     --gold-bright: 43 65% 62%;
+    --gold-ink: 41 88% 27%;          /* accessible gold for light surfaces */
+
     --charcoal: 240 3% 12%;          /* #1C1C1E */
     --offwhite: 43 35% 96%;          /* #F8F6F1 */
     --midgray: 220 9% 46%;           /* #6B7280 */
@@ -64,6 +66,12 @@
     @apply text-[11px] font-medium uppercase tracking-[0.22em];
     color: hsl(var(--gold));
   }
+
+  /* Accessible gold for light backgrounds (WCAG AA on offwhite/white) */
+  .gold-ink {
+    color: hsl(var(--gold-ink));
+  }
+
 
   .nav-underline {
     position: relative;

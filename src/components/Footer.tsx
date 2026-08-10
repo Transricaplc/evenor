@@ -5,12 +5,12 @@ const Footer = () => {
       <div className="container-wide grid gap-12 md:grid-cols-2 lg:grid-cols-5">
         {/* Column 1 — Identity */}
         <div className="lg:col-span-1">
-          <p className="font-display text-white text-xl leading-tight mb-1">Evenor Holdings <span className="text-white/60">(Pty) Ltd</span></p>
+          <p className="font-display text-white text-xl leading-tight mb-1">Evenor Holdings <span className="text-white/75">(Pty) Ltd</span></p>
           <p className="text-gold italic text-sm mb-5">Always Better.</p>
           <div className="h-[2px] w-10 bg-gold mb-5" />
-          <p className="text-xs leading-relaxed text-white/60">Reg. No. K2025/717968</p>
-          <p className="text-xs leading-relaxed text-white/60">CIPC South Africa · B-BBEE Level 2</p>
-          <p className="text-xs text-white/50 mt-6">© {yr} Evenor Holdings (Pty) Ltd.<br/>All rights reserved.</p>
+          <p className="text-xs leading-relaxed text-white/75">Reg. No. K2025/717968</p>
+          <p className="text-xs leading-relaxed text-white/75">CIPC South Africa · B-BBEE Level 2</p>
+          <p className="text-xs text-white/70 mt-6">© {yr} Evenor Holdings (Pty) Ltd.<br/>All rights reserved.</p>
         </div>
 
         {/* Column 2 — Services */}
@@ -42,10 +42,10 @@ const Footer = () => {
         <div>
           <p className="text-white text-[11px] tracking-[0.22em] uppercase mb-5">Direct Correspondence</p>
           <ul className="space-y-2.5 text-sm font-light">
-            <li><span className="text-white/50 text-[11px] uppercase tracking-wider">General</span><br/><a href="mailto:info@evenor.org" className="hover:text-gold transition-colors">info@evenor.org</a></li>
-            <li><span className="text-white/50 text-[11px] uppercase tracking-wider">Sales</span><br/><a href="mailto:sales@evenor.org" className="hover:text-gold transition-colors">sales@evenor.org</a></li>
-            <li><span className="text-white/50 text-[11px] uppercase tracking-wider">Tenders</span><br/><a href="mailto:tenders@evenor.org" className="hover:text-gold transition-colors">tenders@evenor.org</a></li>
-            <li><span className="text-white/50 text-[11px] uppercase tracking-wider">Partners</span><br/><a href="mailto:partners@evenor.org" className="hover:text-gold transition-colors">partners@evenor.org</a></li>
+            <li><span className="text-white/70 text-[11px] uppercase tracking-wider">General</span><br/><a href="mailto:info@evenor.org" className="hover:text-gold transition-colors">info@evenor.org</a></li>
+            <li><span className="text-white/70 text-[11px] uppercase tracking-wider">Sales</span><br/><a href="mailto:sales@evenor.org" className="hover:text-gold transition-colors">sales@evenor.org</a></li>
+            <li><span className="text-white/70 text-[11px] uppercase tracking-wider">Tenders</span><br/><a href="mailto:tenders@evenor.org" className="hover:text-gold transition-colors">tenders@evenor.org</a></li>
+            <li><span className="text-white/70 text-[11px] uppercase tracking-wider">Partners</span><br/><a href="mailto:partners@evenor.org" className="hover:text-gold transition-colors">partners@evenor.org</a></li>
           </ul>
         </div>
 
@@ -72,7 +72,7 @@ const Footer = () => {
       </div>
 
       <div
-        className="container-wide mt-14 pt-6 border-t flex flex-col md:flex-row justify-between gap-2 text-[12px] text-white/40"
+        className="container-wide mt-14 pt-6 border-t flex flex-col md:flex-row justify-between gap-2 text-[12px] text-white/70"
         style={{ borderColor: "hsl(var(--navy-light))" }}
       >
         <span>Evenor Holdings (Pty) Ltd — www.evenor.org</span>

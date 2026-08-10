@@ -141,7 +141,7 @@ const ContactSection = () => {
 
           <div className="bg-white p-8 md:p-10">
             {submitted ? (
-              <div className="bg-navy-deep/5 border-l-4 border-gold p-10 text-center">
+              <div className="bg-navy-deep/5 border-l-4 border-gold p-10 text-center" role="status" aria-live="polite">
                 <p className="gold-label mb-4">Received</p>
                 <p className="text-navy font-display text-2xl md:text-3xl leading-snug mb-4">
                   Thank you.
@@ -151,6 +151,7 @@ const ContactSection = () => {
                   within 48 business hours at the correspondence address you provided.
                 </p>
               </div>
+
             ) : (
               <form onSubmit={handleSubmit} noValidate aria-label="Enquiry form">
                 <label htmlFor="enquiry_type" className="gold-label mb-6 block">Nature of Enquiry</label>

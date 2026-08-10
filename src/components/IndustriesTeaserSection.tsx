@@ -60,7 +60,7 @@ const IndustriesTeaserSection = () => {
               <p className="font-display text-navy text-base md:text-lg font-bold leading-snug mb-1">
                 {label}
               </p>
-              <p className="text-charcoal/60 text-[11px] tracking-[0.18em] uppercase font-medium mt-3 group-hover:text-gold transition-colors">
+              <p className="text-charcoal/80 text-[11px] tracking-[0.18em] uppercase font-medium mt-3 group-hover:text-gold transition-colors">
                 Learn More →
               </p>
             </motion.button>

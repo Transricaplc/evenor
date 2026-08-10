@@ -162,7 +162,7 @@ const SectorCard = ({
         <button
           onClick={goDeep}
           aria-label={`Explore the ${name} sector`}
-          className="inline-flex items-center gap-1.5 text-gold text-sm font-medium mt-5 self-start min-h-11 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold before:absolute before:inset-0 before:content-['']"
+          className="inline-flex items-center gap-1.5 gold-ink text-sm font-medium mt-5 self-start min-h-11 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold before:absolute before:inset-0 before:content-['']"
         >
           <span className="border-b border-gold/0 group-hover:border-gold transition-all">Explore Sector</span>
           <ArrowUpRight size={14} aria-hidden="true" className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />

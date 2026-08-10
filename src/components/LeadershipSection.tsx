@@ -21,10 +21,10 @@ const LeadershipSection = () => {
             </div>
             <div className="mt-6 text-center lg:text-left">
               <p className="text-navy font-semibold text-lg">Joachim Urio</p>
-              <p className="text-gold text-[11px] font-medium tracking-[0.2em] uppercase mt-1">
+              <p className="gold-ink text-[11px] font-medium tracking-[0.2em] uppercase mt-1">
                 Founder & Chief Executive Officer
               </p>
-              <p className="text-midgray text-sm mt-1">Cape Town, South Africa</p>
+              <p className="text-charcoal/75 text-sm mt-1">Cape Town, South Africa</p>
             </div>
           </div>
 

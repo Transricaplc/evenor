@@ -214,7 +214,7 @@ const ContactSection = () => {
                 />
 
 
-                <p className="text-[11px] text-charcoal/60 mt-5 mb-6 leading-relaxed">
+                <p className="text-[11px] text-charcoal/80 mt-5 mb-6 leading-relaxed">
                   Your enquiry will be routed to{" "}
                   <span className="text-navy font-medium">{ROUTING[enquiryType]}</span>. By submitting,
                   you consent to Evenor Holdings storing your details in accordance with POPIA.

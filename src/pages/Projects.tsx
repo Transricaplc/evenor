@@ -74,7 +74,7 @@ const Projects = () => {
       {/* Filter bar */}
       <section className="bg-offwhite sticky top-[72px] z-30 border-b border-navy/10 backdrop-blur">
         <div className="container-wide py-4 flex items-center gap-4 overflow-x-auto">
-          <span className="flex items-center gap-2 text-navy/60 text-[11px] tracking-[0.2em] uppercase font-semibold shrink-0">
+          <span className="flex items-center gap-2 text-navy/80 text-[11px] tracking-[0.2em] uppercase font-semibold shrink-0">
             <Filter size={14} /> Filter by sector
           </span>
           <div className="flex gap-2">
@@ -95,7 +95,7 @@ const Projects = () => {
               );
             })}
           </div>
-          <span className="ml-auto text-navy/50 text-xs shrink-0">
+          <span className="ml-auto text-navy/75 text-xs shrink-0">
             {filtered.length} {filtered.length === 1 ? "engagement" : "engagements"}
           </span>
         </div>
@@ -140,7 +140,7 @@ const Projects = () => {
                   {p.summary}
                 </p>
                 <div className="flex items-center justify-between pt-4 border-t border-navy/10">
-                  <span className="text-navy/60 text-[11px] tracking-[0.16em] uppercase font-semibold">
+                  <span className="text-navy/80 text-[11px] tracking-[0.16em] uppercase font-semibold">
                     {p.client}
                   </span>
                   <span className="inline-flex items-center gap-1 text-navy text-[11px] tracking-[0.16em] uppercase font-bold group-hover:text-gold">
@@ -153,7 +153,7 @@ const Projects = () => {
         </div>
 
         {filtered.length === 0 && (
-          <div className="text-center py-24 text-navy/50">
+          <div className="text-center py-24 text-navy/75">
             <p>No engagements listed in this sector yet.</p>
           </div>
         )}

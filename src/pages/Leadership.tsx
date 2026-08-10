@@ -94,10 +94,10 @@ const Leadership = () => {
                 </div>
                 <div className="mt-6">
                   <p className="text-navy font-display text-2xl font-bold">Joachim Urio</p>
-                  <p className="text-gold text-[11px] font-semibold tracking-[0.22em] uppercase mt-1.5">
+                  <p className="gold-ink text-[11px] font-semibold tracking-[0.22em] uppercase mt-1.5">
                     Founder & Chief Executive Officer
                   </p>
-                  <p className="text-midgray text-sm mt-2">Cape Town, South Africa</p>
+                  <p className="text-charcoal/75 text-sm mt-2">Cape Town, South Africa</p>
                   <div className="flex items-center gap-5 mt-5 pt-5 border-t border-navy/10">
                     <a href="#" className="flex items-center gap-2 text-navy hover:text-gold transition-colors text-sm">
                       <Linkedin size={16} /> LinkedIn

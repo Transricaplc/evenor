@@ -65,7 +65,7 @@ const SectorsSection = () => {
 
       <div className="container-wide relative">
         <div className="text-center mb-16">
-          <p className="gold-label gold-ink gold-ink mb-4">Our Core Activities</p>
+          <p className="gold-label gold-ink mb-4">Our Core Activities</p>
           <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">
             Five Sectors. One Standard.
           </h2>

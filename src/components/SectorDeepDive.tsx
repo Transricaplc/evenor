@@ -107,7 +107,7 @@ const SectorDeepDive = () => {
     <section id="deepdive" className="bg-offwhite section-pad">
       <div className="container-wide">
         <div className="text-center mb-12">
-          <p className="gold-label gold-ink gold-ink mb-4">Sector Intelligence</p>
+          <p className="gold-label gold-ink mb-4">Sector Intelligence</p>
           <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">
             Depth in Every Division.
           </h2>

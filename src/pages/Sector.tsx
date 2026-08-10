@@ -51,7 +51,7 @@ const Sector = () => {
       <section className="section-pad bg-offwhite">
         <div className="container-wide grid lg:grid-cols-[1fr_1.4fr] gap-14 items-start">
           <div>
-            <p className="gold-label gold-ink gold-ink mb-4">Sector Overview</p>
+            <p className="gold-label gold-ink mb-4">Sector Overview</p>
             <div className="h-[3px] w-16 bg-gold" />
           </div>
           <div className="space-y-6 text-charcoal/85 text-[15px] md:text-[17px] leading-[1.9] font-light">
@@ -66,7 +66,7 @@ const Sector = () => {
       <section className="bg-navy text-white section-pad">
         <div className="container-wide">
           <div className="text-center mb-14">
-            <p className="gold-label gold-ink gold-ink mb-4">Our Distinctive Edge</p>
+            <p className="gold-label mb-4">Our Distinctive Edge</p>
             <h2 className="font-display text-3xl md:text-5xl font-bold">Three Pillars.</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -85,7 +85,7 @@ const Sector = () => {
       <section className="bg-offwhite section-pad">
         <div className="container-wide">
           <div className="max-w-2xl mb-14">
-            <p className="gold-label gold-ink gold-ink mb-4">Capability Map</p>
+            <p className="gold-label gold-ink mb-4">Capability Map</p>
             <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">What We Deliver.</h2>
             <div className="mt-6 h-[3px] w-16 bg-gold" />
           </div>
@@ -123,7 +123,7 @@ const Sector = () => {
       <section className="bg-offwhite section-pad">
         <div className="container-wide">
           <div className="text-center mb-14">
-            <p className="gold-label gold-ink gold-ink mb-4">Delivery Method</p>
+            <p className="gold-label gold-ink mb-4">Delivery Method</p>
             <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">How We Engage.</h2>
           </div>
           <div className="grid md:grid-cols-4 gap-6 relative">
@@ -142,7 +142,7 @@ const Sector = () => {
       <section className="bg-white section-pad">
         <div className="container-wide">
           <div className="max-w-2xl mb-12">
-            <p className="gold-label gold-ink gold-ink mb-4">Representative Engagement</p>
+            <p className="gold-label gold-ink mb-4">Representative Engagement</p>
             <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">Case in Point.</h2>
             <div className="mt-6 h-[3px] w-16 bg-gold" />
           </div>
@@ -208,7 +208,7 @@ const Sector = () => {
         <div className="container-wide">
           <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
             <div>
-              <p className="gold-label gold-ink gold-ink mb-3">Continue Exploring</p>
+              <p className="gold-label gold-ink mb-3">Continue Exploring</p>
               <h2 className="font-display text-navy text-2xl md:text-4xl font-bold">Other Sectors.</h2>
             </div>
           </div>

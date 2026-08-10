@@ -101,7 +101,7 @@ const ProjectsSection = () => {
     <section id="projects" className="bg-navy section-pad text-white">
       <div className="container-wide">
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          <p className="gold-label gold-ink gold-ink mb-4">Our Capacity</p>
+          <p className="gold-label mb-4">Our Capacity</p>
           <h2 className="font-display text-white text-3xl md:text-5xl font-bold mb-6">
             What Evenor Holdings Brings to the Table.
           </h2>

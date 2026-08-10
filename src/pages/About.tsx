@@ -63,7 +63,7 @@ const About = () => {
       <PageProgressBar />
       <Navbar />
 
-      <main>
+      <main id="main-content">
         <PageHero
           eyebrow="Who We Are"
           title="A Continental Standard, Held Without Compromise."

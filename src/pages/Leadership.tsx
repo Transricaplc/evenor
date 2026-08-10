@@ -66,7 +66,7 @@ const Leadership = () => {
       <PageProgressBar />
       <Navbar />
 
-      <main>
+      <main id="main-content">
         <PageHero
           eyebrow="Leadership"
           title="The Vision Behind the Work."

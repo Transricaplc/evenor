@@ -116,16 +116,16 @@ const SectorCard = ({
     window.scrollTo(0, 0);
   };
   return (
-    <div
+    <article
       ref={ref}
-      onClick={goDeep}
       style={{
         transitionDelay: `${index * 90}ms`,
         opacity: seen ? 1 : 0,
         transform: seen ? "translateY(0)" : "translateY(28px)",
       }}
-      className="group relative bg-white p-8 min-h-[320px] flex flex-col overflow-hidden cursor-pointer transition-all duration-700 ease-out border-l-4 border-gold shadow-[0_1px_2px_rgba(11,37,69,0.04)] hover:-translate-y-2 hover:shadow-[0_24px_48px_-16px_rgba(11,37,69,0.22)]"
+      className="group relative bg-white p-8 min-h-[320px] flex flex-col overflow-hidden transition-all duration-700 ease-out border-l-4 border-gold shadow-[0_1px_2px_rgba(11,37,69,0.04)] hover:-translate-y-2 hover:shadow-[0_24px_48px_-16px_rgba(11,37,69,0.22)] focus-within:-translate-y-2"
     >
+
       {/* navy fill sweep */}
       <span
         aria-hidden

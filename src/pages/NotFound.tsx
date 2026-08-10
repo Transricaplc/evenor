@@ -22,6 +22,7 @@ const NotFound = () => {
       />
       <Navbar />
 
+      <main id="main-content" className="flex-1 flex flex-col">
       <section className="flex-1 flex items-center relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-25 bg-cover bg-center"
@@ -89,6 +90,8 @@ const NotFound = () => {
           </p>
         </div>
       </section>
+      </main>
+
 
       <Footer />
     </div>

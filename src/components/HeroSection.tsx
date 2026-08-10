@@ -48,10 +48,15 @@ const HeroSection = () => {
     document.querySelector(h)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col overflow-hidden">
+    <section
+      id="home"
+      aria-label="Evenor Holdings introduction"
+      className="relative min-h-dvh flex flex-col overflow-hidden"
+    >
       <AnimatePresence mode="sync">
         <motion.div
           key={i}
+          aria-hidden="true"
           initial={{ opacity: 0, scale: 1.06 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
@@ -60,7 +65,8 @@ const HeroSection = () => {
           style={{ backgroundImage: `url('${slides[i].image}')` }}
         />
       </AnimatePresence>
-      <div className="absolute inset-0 bg-navy/[0.78]" />
+      <div className="absolute inset-0 bg-navy/[0.82]" aria-hidden="true" />
+
 
       <div className="relative flex-1 flex items-center justify-center px-6 pt-32 pb-24">
         <AnimatePresence mode="wait">

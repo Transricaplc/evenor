@@ -163,7 +163,7 @@ const Projects = () => {
       <section className="bg-navy text-white py-16">
         <div className="container-wide grid md:grid-cols-[1.4fr_1fr] gap-10 items-center">
           <div>
-            <p className="gold-label gold-ink mb-3">Client Confidentiality</p>
+            <p className="gold-label mb-3">Client Confidentiality</p>
             <h3 className="font-display text-2xl md:text-3xl font-bold leading-tight mb-4">
               Selected engagements are not disclosed on public channels.
             </h3>

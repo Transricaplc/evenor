@@ -49,7 +49,7 @@ const Leadership = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-offwhite">
+    <div className="min-h-dvh bg-offwhite">
       <Seo
         title="Leadership & Governance | Evenor Holdings | Joachim Urio, Founder & CEO"
         description="Meet Joachim Urio, Founder & CEO of Evenor Holdings, and read our governance framework: principal-led engagement, regulatory standing, advisory council and corporate charter."

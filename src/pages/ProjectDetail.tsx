@@ -19,7 +19,7 @@ const ProjectDetail = () => {
   const recommend = related.length ? related : fallback;
 
   return (
-    <div className="min-h-screen bg-offwhite">
+    <div className="min-h-dvh bg-offwhite">
       <Seo
         title={`${project.title} | ${project.sector} | Evenor Holdings`}
         description={project.summary}
@@ -38,6 +38,7 @@ const ProjectDetail = () => {
       />
       <PageProgressBar />
       <Navbar />
+      <main id="main-content">
 
       <PageHero
         eyebrow={`${project.sector} · ${project.status}`}
@@ -193,6 +194,8 @@ const ProjectDetail = () => {
           <Link to="/#contact" className="inline-flex items-center gap-2 bg-navy text-white px-6 py-3 text-sm font-semibold tracking-wider uppercase hover:bg-navy-deep transition-colors">Initiate Engagement</Link>
         </div>
       </section>
+      </main>
+
 
       <Footer />
       <WhatsAppButton />

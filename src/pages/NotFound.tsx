@@ -14,7 +14,7 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-navy flex flex-col">
+    <div className="min-h-dvh bg-navy flex flex-col">
       <Seo
         title="Page Not Found | Evenor Holdings"
         description="The page you are looking for is no longer available or has been relocated. Return to the Evenor Holdings homepage."

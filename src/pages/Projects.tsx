@@ -26,13 +26,14 @@ const Projects = () => {
   );
 
   return (
-    <div className="min-h-screen bg-offwhite">
+    <div className="min-h-dvh bg-offwhite">
       <Seo
         title="Projects & Portfolio | Evenor Holdings | Case Studies Across Africa"
         description="Selected engagements from Evenor Holdings — corridor logistics, national fibre backbones, public-sector digital transformation, coastal fuel terminals and mine-to-port optimisation."
       />
       <PageProgressBar />
       <Navbar />
+      <main id="main-content">
 
       <PageHero
         eyebrow="Portfolio — Representative Engagements"
@@ -175,6 +176,8 @@ const Projects = () => {
           </div>
         </div>
       </section>
+      </main>
+
 
       <Footer />
       <WhatsAppButton />

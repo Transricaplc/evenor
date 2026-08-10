@@ -17,7 +17,7 @@ const Sector = () => {
   const others = sectors.filter((s) => s.slug !== sector.slug);
 
   return (
-    <div className="min-h-screen bg-offwhite">
+    <div className="min-h-dvh bg-offwhite">
       <Seo
         title={`${sector.nav} | Evenor Holdings`}
         description={sector.intro[0]?.slice(0, 200) ?? sector.title}
@@ -33,6 +33,7 @@ const Sector = () => {
       />
       <PageProgressBar />
       <Navbar />
+      <main id="main-content">
 
       <PageHero
         eyebrow={sector.eyebrow}
@@ -230,6 +231,8 @@ const Sector = () => {
           </div>
         </div>
       </section>
+      </main>
+
 
       <Footer />
       <WhatsAppButton />

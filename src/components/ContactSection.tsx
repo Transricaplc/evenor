@@ -152,9 +152,10 @@ const ContactSection = () => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate>
-                <p className="gold-label mb-6">Nature of Enquiry</p>
+              <form onSubmit={handleSubmit} noValidate aria-label="Enquiry form">
+                <label htmlFor="enquiry_type" className="gold-label mb-6 block">Nature of Enquiry</label>
                 <select
+                  id="enquiry_type"
                   name="enquiry_type"
                   required
                   value={enquiryType}
@@ -167,19 +168,38 @@ const ContactSection = () => {
                 </select>
 
                 <div className="grid md:grid-cols-2 gap-4">
-                  <input required name="name" placeholder="Full Name" className={inp} maxLength={120} />
-                  <input name="organisation" placeholder="Organisation / Institution" className={inp} maxLength={200} />
-                  <input name="country" placeholder="Country" className={inp} maxLength={100} />
-                  <input name="phone" type="tel" placeholder="Phone (with country code)" className={inp} maxLength={40} />
-                  <input required type="email" name="email" placeholder="Email Address" className={`${inp} md:col-span-2`} maxLength={254} />
-                  <textarea
-                    required
-                    name="message"
-                    placeholder="Message / Nature of Enquiry"
-                    rows={6}
-                    maxLength={5000}
-                    className={`${inp} md:col-span-2 resize-none`}
-                  />
+                  <div>
+                    <label htmlFor="name" className="sr-only">Full name</label>
+                    <input id="name" required name="name" placeholder="Full Name" className={inp} maxLength={120} autoComplete="name" />
+                  </div>
+                  <div>
+                    <label htmlFor="organisation" className="sr-only">Organisation or institution</label>
+                    <input id="organisation" name="organisation" placeholder="Organisation / Institution" className={inp} maxLength={200} autoComplete="organization" />
+                  </div>
+                  <div>
+                    <label htmlFor="country" className="sr-only">Country</label>
+                    <input id="country" name="country" placeholder="Country" className={inp} maxLength={100} autoComplete="country-name" />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="sr-only">Phone number with country code</label>
+                    <input id="phone" name="phone" type="tel" placeholder="Phone (with country code)" className={inp} maxLength={40} autoComplete="tel" />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label htmlFor="email" className="sr-only">Email address</label>
+                    <input id="email" required type="email" name="email" placeholder="Email Address" className={inp} maxLength={254} autoComplete="email" />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label htmlFor="message" className="sr-only">Message or nature of enquiry</label>
+                    <textarea
+                      id="message"
+                      required
+                      name="message"
+                      placeholder="Message / Nature of Enquiry"
+                      rows={6}
+                      maxLength={5000}
+                      className={`${inp} resize-none`}
+                    />
+                  </div>
                 </div>
 
                 {/* Honeypot */}
@@ -191,6 +211,7 @@ const ContactSection = () => {
                   aria-hidden="true"
                   className="hidden"
                 />
+
 
                 <p className="text-[11px] text-charcoal/60 mt-5 mb-6 leading-relaxed">
                   Your enquiry will be routed to{" "}

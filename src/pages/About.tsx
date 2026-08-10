@@ -55,7 +55,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-offwhite">
+    <div className="min-h-dvh bg-offwhite">
       <Seo
         title="About Evenor Holdings | Continental Vision, Institutional Discipline"
         description="Discover Evenor Holdings — mission, values, continental presence across South Africa, Tanzania, Kenya, Zambia, DRC, Rwanda and Uganda, and our corporate history from 2021 to today."
@@ -63,7 +63,7 @@ const About = () => {
       <PageProgressBar />
       <Navbar />
 
-      <main>
+      <main id="main-content">
         <PageHero
           eyebrow="Who We Are"
           title="A Continental Standard, Held Without Compromise."
@@ -80,7 +80,7 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <p className="gold-label mb-6">Company Profile</p>
+              <p className="gold-label gold-ink mb-6">Company Profile</p>
               <h2 className="font-display text-navy text-3xl md:text-5xl font-bold leading-tight mb-10">
                 Built in Africa. Engineered for its next century.
               </h2>
@@ -106,7 +106,7 @@ const About = () => {
         <section className="section-pad bg-smoke">
           <div className="container-wide">
             <div className="text-center mb-14">
-              <p className="gold-label mb-4">Our Framework</p>
+              <p className="gold-label gold-ink mb-4">Our Framework</p>
               <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">
                 Mission · Vision · Values
               </h2>
@@ -210,7 +210,7 @@ const About = () => {
         <section className="section-pad bg-offwhite">
           <div className="container-wide">
             <div className="text-center mb-16">
-              <p className="gold-label mb-4">Our Trajectory</p>
+              <p className="gold-label gold-ink mb-4">Our Trajectory</p>
               <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">
                 A Deliberate, Compounding Build.
               </h2>

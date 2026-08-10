@@ -17,7 +17,7 @@ const Sector = () => {
   const others = sectors.filter((s) => s.slug !== sector.slug);
 
   return (
-    <div className="min-h-screen bg-offwhite">
+    <div className="min-h-dvh bg-offwhite">
       <Seo
         title={`${sector.nav} | Evenor Holdings`}
         description={sector.intro[0]?.slice(0, 200) ?? sector.title}
@@ -33,6 +33,7 @@ const Sector = () => {
       />
       <PageProgressBar />
       <Navbar />
+      <main id="main-content">
 
       <PageHero
         eyebrow={sector.eyebrow}
@@ -50,7 +51,7 @@ const Sector = () => {
       <section className="section-pad bg-offwhite">
         <div className="container-wide grid lg:grid-cols-[1fr_1.4fr] gap-14 items-start">
           <div>
-            <p className="gold-label mb-4">Sector Overview</p>
+            <p className="gold-label gold-ink mb-4">Sector Overview</p>
             <div className="h-[3px] w-16 bg-gold" />
           </div>
           <div className="space-y-6 text-charcoal/85 text-[15px] md:text-[17px] leading-[1.9] font-light">
@@ -84,7 +85,7 @@ const Sector = () => {
       <section className="bg-offwhite section-pad">
         <div className="container-wide">
           <div className="max-w-2xl mb-14">
-            <p className="gold-label mb-4">Capability Map</p>
+            <p className="gold-label gold-ink mb-4">Capability Map</p>
             <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">What We Deliver.</h2>
             <div className="mt-6 h-[3px] w-16 bg-gold" />
           </div>
@@ -122,13 +123,13 @@ const Sector = () => {
       <section className="bg-offwhite section-pad">
         <div className="container-wide">
           <div className="text-center mb-14">
-            <p className="gold-label mb-4">Delivery Method</p>
+            <p className="gold-label gold-ink mb-4">Delivery Method</p>
             <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">How We Engage.</h2>
           </div>
           <div className="grid md:grid-cols-4 gap-6 relative">
             {sector.approach.map((a) => (
               <div key={a.step} className="bg-white p-7 border-t-2 border-gold">
-                <div className="font-display text-navy/20 text-5xl font-bold mb-3">{a.step}</div>
+                <div className="font-display text-navy/55 text-5xl font-bold mb-3">{a.step}</div>
                 <h3 className="font-display text-navy text-xl font-bold mb-3">{a.title}</h3>
                 <p className="text-charcoal/75 text-sm font-light leading-relaxed">{a.desc}</p>
               </div>
@@ -141,7 +142,7 @@ const Sector = () => {
       <section className="bg-white section-pad">
         <div className="container-wide">
           <div className="max-w-2xl mb-12">
-            <p className="gold-label mb-4">Representative Engagement</p>
+            <p className="gold-label gold-ink mb-4">Representative Engagement</p>
             <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">Case in Point.</h2>
             <div className="mt-6 h-[3px] w-16 bg-gold" />
           </div>
@@ -154,7 +155,7 @@ const Sector = () => {
                 className="w-full h-full object-cover min-h-[360px] max-h-[540px] shadow-lg"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-deep/90 to-transparent p-6">
-                <p className="text-gold text-[11px] tracking-[0.2em] uppercase font-medium">Location</p>
+                <p className="gold-ink text-[11px] tracking-[0.2em] uppercase font-medium">Location</p>
                 <p className="text-white font-display text-lg mt-1">{sector.caseStudy.location}</p>
               </div>
             </div>
@@ -207,7 +208,7 @@ const Sector = () => {
         <div className="container-wide">
           <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
             <div>
-              <p className="gold-label mb-3">Continue Exploring</p>
+              <p className="gold-label gold-ink mb-3">Continue Exploring</p>
               <h2 className="font-display text-navy text-2xl md:text-4xl font-bold">Other Sectors.</h2>
             </div>
           </div>
@@ -221,7 +222,7 @@ const Sector = () => {
               >
                 <p className="text-[11px] tracking-[0.2em] uppercase text-midgray font-medium mb-2">Sector</p>
                 <p className="font-display text-navy text-lg font-bold mb-4 leading-snug">{o.nav}</p>
-                <span className="inline-flex items-center gap-1.5 text-gold text-sm font-medium">
+                <span className="inline-flex items-center gap-1.5 gold-ink text-sm font-medium">
                   Explore
                   <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </span>
@@ -230,6 +231,8 @@ const Sector = () => {
           </div>
         </div>
       </section>
+      </main>
+
 
       <Footer />
       <WhatsAppButton />

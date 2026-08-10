@@ -48,10 +48,15 @@ const HeroSection = () => {
     document.querySelector(h)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col overflow-hidden">
+    <section
+      id="home"
+      aria-label="Evenor Holdings introduction"
+      className="relative min-h-dvh flex flex-col overflow-hidden"
+    >
       <AnimatePresence mode="sync">
         <motion.div
           key={i}
+          aria-hidden="true"
           initial={{ opacity: 0, scale: 1.06 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
@@ -60,7 +65,8 @@ const HeroSection = () => {
           style={{ backgroundImage: `url('${slides[i].image}')` }}
         />
       </AnimatePresence>
-      <div className="absolute inset-0 bg-navy/[0.78]" />
+      <div className="absolute inset-0 bg-navy/[0.82]" aria-hidden="true" />
+
 
       <div className="relative flex-1 flex items-center justify-center px-6 pt-32 pb-24">
         <AnimatePresence mode="wait">
@@ -79,16 +85,22 @@ const HeroSection = () => {
               {slides[i].title[1]}
             </h1>
 
-            <p className="text-white/80 text-base md:text-xl font-light max-w-2xl mx-auto leading-relaxed mb-10">
+            <p className="text-white/90 text-base md:text-xl font-light max-w-2xl mx-auto leading-relaxed mb-10">
               {slides[i].body}{" "}
               <em className="text-gold not-italic font-normal">Always Better.</em>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button onClick={() => go("#sectors")} className="btn-gold">
+              <button
+                onClick={() => go("#sectors")}
+                className="btn-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              >
                 Explore Our Sectors
               </button>
-              <button onClick={() => go("#contact")} className="btn-outline-white">
+              <button
+                onClick={() => go("#contact")}
+                className="btn-outline-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+              >
                 Request a Consultation
               </button>
             </div>
@@ -96,29 +108,40 @@ const HeroSection = () => {
         </AnimatePresence>
 
         {/* Slide indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+        <div
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1"
+          role="tablist"
+          aria-label="Hero slides"
+        >
           {slides.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setI(idx)}
-              aria-label={`Show slide ${idx + 1}`}
-              className={`h-[3px] transition-all duration-500 ${
-                idx === i ? "w-10 bg-gold" : "w-5 bg-white/40 hover:bg-white/70"
-              }`}
-            />
+              role="tab"
+              aria-selected={idx === i}
+              aria-label={`Show slide ${idx + 1} of ${slides.length}`}
+              className="min-h-11 min-w-11 flex items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+            >
+              <span
+                aria-hidden="true"
+                className={`block h-[3px] transition-all duration-500 ${
+                  idx === i ? "w-10 bg-gold" : "w-5 bg-white/70"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>
 
-      <div className="relative bg-navy-deep border-t border-white/5">
+      <div className="relative bg-navy-deep border-t border-white/10">
         <div className="container-wide py-5 grid grid-cols-3 md:grid-cols-6 gap-4">
           {sectors.map(({ icon: Icon, label }) => (
             <button
               key={label}
-              className="group flex flex-col items-center gap-2 transition-colors"
+              className="group flex flex-col items-center justify-center gap-2 min-h-11 py-2 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
               onClick={() => go("#sectors")}
             >
-              <Icon size={20} className="text-white group-hover:text-gold transition-colors" />
+              <Icon size={20} aria-hidden="true" className="text-white group-hover:text-gold transition-colors" />
               <span className="text-white group-hover:text-gold text-[10px] md:text-[11px] font-medium tracking-[0.18em] transition-colors text-center">
                 {label}
               </span>
@@ -126,6 +149,7 @@ const HeroSection = () => {
           ))}
         </div>
       </div>
+
     </section>
   );
 };

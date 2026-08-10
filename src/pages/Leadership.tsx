@@ -49,7 +49,7 @@ const Leadership = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-offwhite">
+    <div className="min-h-dvh bg-offwhite">
       <Seo
         title="Leadership & Governance | Evenor Holdings | Joachim Urio, Founder & CEO"
         description="Meet Joachim Urio, Founder & CEO of Evenor Holdings, and read our governance framework: principal-led engagement, regulatory standing, advisory council and corporate charter."
@@ -66,7 +66,7 @@ const Leadership = () => {
       <PageProgressBar />
       <Navbar />
 
-      <main>
+      <main id="main-content">
         <PageHero
           eyebrow="Leadership"
           title="The Vision Behind the Work."
@@ -94,10 +94,10 @@ const Leadership = () => {
                 </div>
                 <div className="mt-6">
                   <p className="text-navy font-display text-2xl font-bold">Joachim Urio</p>
-                  <p className="text-gold text-[11px] font-semibold tracking-[0.22em] uppercase mt-1.5">
+                  <p className="gold-ink text-[11px] font-semibold tracking-[0.22em] uppercase mt-1.5">
                     Founder & Chief Executive Officer
                   </p>
-                  <p className="text-midgray text-sm mt-2">Cape Town, South Africa</p>
+                  <p className="text-charcoal/75 text-sm mt-2">Cape Town, South Africa</p>
                   <div className="flex items-center gap-5 mt-5 pt-5 border-t border-navy/10">
                     <a href="#" className="flex items-center gap-2 text-navy hover:text-gold transition-colors text-sm">
                       <Linkedin size={16} /> LinkedIn
@@ -118,7 +118,7 @@ const Leadership = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
               >
-                <p className="gold-label mb-4">Letter from the CEO</p>
+                <p className="gold-label gold-ink mb-4">Letter from the CEO</p>
                 <h2 className="font-display italic text-navy text-2xl md:text-[34px] leading-snug mb-10">
                   "Africa does not need to be fixed. It needs to be built — with ambition equal to its potential."
                 </h2>
@@ -147,7 +147,7 @@ const Leadership = () => {
         <section className="section-pad bg-smoke">
           <div className="container-wide">
             <div className="text-center mb-14 max-w-3xl mx-auto">
-              <p className="gold-label mb-4">Governance</p>
+              <p className="gold-label gold-ink mb-4">Governance</p>
               <h2 className="font-display text-navy text-3xl md:text-5xl font-bold mb-6">
                 Standards Held in the Open.
               </h2>
@@ -179,7 +179,7 @@ const Leadership = () => {
         <section className="py-20 bg-offwhite">
           <div className="container-wide max-w-3xl mx-auto text-center">
             <div className="border-t border-b border-navy/15 py-10">
-              <p className="gold-label mb-4">Wider Bench</p>
+              <p className="gold-label gold-ink mb-4">Wider Bench</p>
               <p className="font-display italic text-navy text-xl md:text-2xl leading-snug mb-4">
                 Additional leadership and specialist profiles are available upon request to credentialed counterparts.
               </p>

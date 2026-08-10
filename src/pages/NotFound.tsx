@@ -14,7 +14,7 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-navy flex flex-col">
+    <div className="min-h-dvh bg-navy flex flex-col">
       <Seo
         title="Page Not Found | Evenor Holdings"
         description="The page you are looking for is no longer available or has been relocated. Return to the Evenor Holdings homepage."
@@ -22,6 +22,7 @@ const NotFound = () => {
       />
       <Navbar />
 
+      <main id="main-content" className="flex-1 flex flex-col">
       <section className="flex-1 flex items-center relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-25 bg-cover bg-center"
@@ -89,6 +90,8 @@ const NotFound = () => {
           </p>
         </div>
       </section>
+      </main>
+
 
       <Footer />
     </div>

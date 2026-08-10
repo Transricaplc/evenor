@@ -7,7 +7,7 @@ const LeadershipSection = () => {
     <section id="leadership" className="bg-offwhite section-pad">
       <div className="container-wide">
         <div className="text-center mb-16">
-          <p className="gold-label mb-4">Leadership</p>
+          <p className="gold-label gold-ink mb-4">Leadership</p>
           <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">
             The Vision Behind the Work.
           </h2>
@@ -21,15 +21,15 @@ const LeadershipSection = () => {
             </div>
             <div className="mt-6 text-center lg:text-left">
               <p className="text-navy font-semibold text-lg">Joachim Urio</p>
-              <p className="text-gold text-[11px] font-medium tracking-[0.2em] uppercase mt-1">
+              <p className="gold-ink text-[11px] font-medium tracking-[0.2em] uppercase mt-1">
                 Founder & Chief Executive Officer
               </p>
-              <p className="text-midgray text-sm mt-1">Cape Town, South Africa</p>
+              <p className="text-charcoal/75 text-sm mt-1">Cape Town, South Africa</p>
             </div>
           </div>
 
           <div className="lg:pl-8">
-            <p className="gold-label mb-4">From the CEO</p>
+            <p className="gold-label gold-ink mb-4">From the CEO</p>
             <h3 className="font-display italic text-navy text-2xl md:text-[32px] leading-snug mb-8">
               "Africa does not need to be fixed. It needs to be built — with ambition equal to its potential."
             </h3>
@@ -53,7 +53,7 @@ const LeadershipSection = () => {
         </div>
 
         <div className="mt-16 max-w-3xl mx-auto">
-          <p className="text-center italic font-light" style={{ color: "#6B7280", fontSize: "14px" }}>
+          <p className="text-center italic font-light" style={{ color: "hsl(var(--charcoal) / 0.8)", fontSize: "14px" }}>
             Additional leadership profiles available upon request to credentialed counterparts.
           </p>
         </div>

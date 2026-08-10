@@ -26,7 +26,7 @@ const IndustriesTeaserSection = () => {
     <section id="industries" className="section-pad bg-offwhite">
       <div className="container-wide">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <p className="gold-label mb-4">Industries We Serve</p>
+          <p className="gold-label gold-ink mb-4">Industries We Serve</p>
           <h2 className="font-display text-navy text-3xl md:text-5xl font-bold mb-6 leading-tight">
             Eight Sectors. One Standard of Delivery.
           </h2>
@@ -60,7 +60,7 @@ const IndustriesTeaserSection = () => {
               <p className="font-display text-navy text-base md:text-lg font-bold leading-snug mb-1">
                 {label}
               </p>
-              <p className="text-charcoal/60 text-[11px] tracking-[0.18em] uppercase font-medium mt-3 group-hover:text-gold transition-colors">
+              <p className="text-charcoal/80 text-[11px] tracking-[0.18em] uppercase font-medium mt-3 group-hover:text-gold transition-colors">
                 Learn More →
               </p>
             </motion.button>

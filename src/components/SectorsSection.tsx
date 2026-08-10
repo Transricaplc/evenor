@@ -65,7 +65,7 @@ const SectorsSection = () => {
 
       <div className="container-wide relative">
         <div className="text-center mb-16">
-          <p className="gold-label mb-4">Our Core Activities</p>
+          <p className="gold-label gold-ink mb-4">Our Core Activities</p>
           <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">
             Five Sectors. One Standard.
           </h2>
@@ -116,16 +116,16 @@ const SectorCard = ({
     window.scrollTo(0, 0);
   };
   return (
-    <div
+    <article
       ref={ref}
-      onClick={goDeep}
       style={{
         transitionDelay: `${index * 90}ms`,
         opacity: seen ? 1 : 0,
         transform: seen ? "translateY(0)" : "translateY(28px)",
       }}
-      className="group relative bg-white p-8 min-h-[320px] flex flex-col overflow-hidden cursor-pointer transition-all duration-700 ease-out border-l-4 border-gold shadow-[0_1px_2px_rgba(11,37,69,0.04)] hover:-translate-y-2 hover:shadow-[0_24px_48px_-16px_rgba(11,37,69,0.22)]"
+      className="group relative bg-white p-8 min-h-[320px] flex flex-col overflow-hidden transition-all duration-700 ease-out border-l-4 border-gold shadow-[0_1px_2px_rgba(11,37,69,0.04)] hover:-translate-y-2 hover:shadow-[0_24px_48px_-16px_rgba(11,37,69,0.22)] focus-within:-translate-y-2"
     >
+
       {/* navy fill sweep */}
       <span
         aria-hidden
@@ -160,14 +160,16 @@ const SectorCard = ({
         </div>
 
         <button
-          onClick={(e) => { e.stopPropagation(); goDeep(); }}
-          className="inline-flex items-center gap-1.5 text-gold text-sm font-medium mt-5 self-start"
+          onClick={goDeep}
+          aria-label={`Explore the ${name} sector`}
+          className="inline-flex items-center gap-1.5 gold-ink text-sm font-medium mt-5 self-start min-h-11 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold before:absolute before:inset-0 before:content-['']"
         >
           <span className="border-b border-gold/0 group-hover:border-gold transition-all">Explore Sector</span>
-          <ArrowUpRight size={14} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
+          <ArrowUpRight size={14} aria-hidden="true" className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
         </button>
       </div>
-    </div>
+    </article>
+
   );
 };
 

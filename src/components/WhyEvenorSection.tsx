@@ -38,11 +38,14 @@ const WhyEvenorSection = () => {
         <div className="relative flex items-center justify-center p-8 lg:p-20">
           <img
             src={IMG.boardroom}
-            alt="African business executives in modern boardroom"
+            alt="Executive boardroom at Evenor Holdings head office overlooking the city at dusk"
             loading="lazy"
+            width={1920}
+            height={1088}
             className="relative w-full max-w-[520px] aspect-[4/3] object-cover"
             style={{ boxShadow: "12px 12px 0 hsl(var(--gold))" }}
           />
+
         </div>
       </div>
     </section>

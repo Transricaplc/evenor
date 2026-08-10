@@ -7,7 +7,7 @@ const LeadershipSection = () => {
     <section id="leadership" className="bg-offwhite section-pad">
       <div className="container-wide">
         <div className="text-center mb-16">
-          <p className="gold-label mb-4">Leadership</p>
+          <p className="gold-label gold-ink gold-ink mb-4">Leadership</p>
           <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">
             The Vision Behind the Work.
           </h2>
@@ -29,7 +29,7 @@ const LeadershipSection = () => {
           </div>
 
           <div className="lg:pl-8">
-            <p className="gold-label mb-4">From the CEO</p>
+            <p className="gold-label gold-ink gold-ink mb-4">From the CEO</p>
             <h3 className="font-display italic text-navy text-2xl md:text-[32px] leading-snug mb-8">
               "Africa does not need to be fixed. It needs to be built — with ambition equal to its potential."
             </h3>

@@ -108,7 +108,7 @@ const ProjectDetail = () => {
       {/* Approach */}
       <section className="section-pad bg-navy text-white">
         <div className="container-wide">
-          <p className="gold-label mb-4">Evenor Approach</p>
+          <p className="gold-label gold-ink gold-ink mb-4">Evenor Approach</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12 max-w-3xl">
             How the mandate was structured, sequenced, and governed.
           </h2>
@@ -126,7 +126,7 @@ const ProjectDetail = () => {
       {/* Outcome */}
       <section className="section-pad bg-offwhite">
         <div className="container-wide">
-          <p className="gold-label mb-4">Measured Outcome</p>
+          <p className="gold-label gold-ink gold-ink mb-4">Measured Outcome</p>
           <h2 className="font-display text-navy text-3xl md:text-4xl font-bold mb-10 max-w-3xl">
             Results the client took to their board.
           </h2>
@@ -149,7 +149,7 @@ const ProjectDetail = () => {
         <div className="container-wide">
           <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
             <div>
-              <p className="gold-label mb-3">Continue Reading</p>
+              <p className="gold-label gold-ink gold-ink mb-3">Continue Reading</p>
               <h3 className="font-display text-2xl md:text-3xl font-bold">Related engagements</h3>
             </div>
             <Link to="/projects" className="inline-flex items-center gap-2 text-gold text-[11px] tracking-[0.2em] uppercase font-bold hover:text-white transition-colors">

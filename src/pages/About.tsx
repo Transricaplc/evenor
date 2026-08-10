@@ -80,7 +80,7 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <p className="gold-label mb-6">Company Profile</p>
+              <p className="gold-label gold-ink gold-ink mb-6">Company Profile</p>
               <h2 className="font-display text-navy text-3xl md:text-5xl font-bold leading-tight mb-10">
                 Built in Africa. Engineered for its next century.
               </h2>
@@ -106,7 +106,7 @@ const About = () => {
         <section className="section-pad bg-smoke">
           <div className="container-wide">
             <div className="text-center mb-14">
-              <p className="gold-label mb-4">Our Framework</p>
+              <p className="gold-label gold-ink gold-ink mb-4">Our Framework</p>
               <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">
                 Mission · Vision · Values
               </h2>
@@ -210,7 +210,7 @@ const About = () => {
         <section className="section-pad bg-offwhite">
           <div className="container-wide">
             <div className="text-center mb-16">
-              <p className="gold-label mb-4">Our Trajectory</p>
+              <p className="gold-label gold-ink gold-ink mb-4">Our Trajectory</p>
               <h2 className="font-display text-navy text-3xl md:text-5xl font-bold">
                 A Deliberate, Compounding Build.
               </h2>
@@ -255,7 +255,7 @@ const About = () => {
         >
           <div className="absolute inset-0 bg-navy/85" />
           <div className="relative container-wide text-center max-w-3xl mx-auto text-white">
-            <p className="gold-label mb-4">Leadership</p>
+            <p className="gold-label gold-ink gold-ink mb-4">Leadership</p>
             <h2 className="font-display text-white text-3xl md:text-5xl font-bold mb-6">
               Meet the principals behind the mandate.
             </h2>

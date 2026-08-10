@@ -46,7 +46,7 @@ const PhilosophySection = () => {
     <>
       <section className="bg-navy section-pad text-white">
         <div className="container-wide max-w-4xl text-center">
-          <p className="gold-label mb-6">Our Philosophy</p>
+          <p className="gold-label gold-ink gold-ink mb-6">Our Philosophy</p>
           <h2 className="font-display italic text-white text-3xl md:text-5xl mb-8">
             "Always Better."
           </h2>

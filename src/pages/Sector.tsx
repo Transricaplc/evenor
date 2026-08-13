@@ -148,12 +148,21 @@ const Sector = () => {
           </div>
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-stretch">
             <div className="relative">
-              <img
-                src={sector.caseStudy.image}
-                alt={sector.caseStudy.client}
-                loading="lazy"
-                className="w-full h-full object-cover min-h-[360px] max-h-[540px] shadow-lg"
-              />
+              {sourceFor(sector.caseStudy.image) ? (
+                <ResponsiveImage
+                  image={sourceFor(sector.caseStudy.image)!}
+                  alt={sector.caseStudy.client}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="w-full h-full object-cover min-h-[360px] max-h-[540px] shadow-lg"
+                />
+              ) : (
+                <img
+                  src={sector.caseStudy.image}
+                  alt={sector.caseStudy.client}
+                  loading="lazy"
+                  className="w-full h-full object-cover min-h-[360px] max-h-[540px] shadow-lg"
+                />
+              )}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-deep/90 to-transparent p-6">
                 <p className="gold-ink text-[11px] tracking-[0.2em] uppercase font-medium">Location</p>
                 <p className="text-white font-display text-lg mt-1">{sector.caseStudy.location}</p>

@@ -1,5 +1,6 @@
 import { Mail, Linkedin } from "lucide-react";
-import ceoPhoto from "@/assets/leader-ceo.png";
+import { CEO_IMAGE } from "@/assets/images";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { IMG } from "@/assets/images";
 
 const LeadershipSection = () => {
@@ -16,7 +17,12 @@ const LeadershipSection = () => {
         <div className="grid lg:grid-cols-[420px_1fr] gap-12 lg:gap-16 items-start max-w-6xl mx-auto">
           <div className="mx-auto lg:mx-0">
             <div className="relative w-[280px] sm:w-[360px] lg:w-[420px] aspect-[4/5] overflow-hidden shadow-[0_20px_50px_-20px_rgba(11,37,69,0.4)] border-l-4 border-gold group">
-              <img src={ceoPhoto} alt="Joachim Urio, Founder & CEO of Evenor Holdings" className="w-full h-full object-cover object-[center_top] transition-transform duration-700 group-hover:scale-105" />
+              <ResponsiveImage
+                image={CEO_IMAGE}
+                alt="Joachim Urio, Founder & CEO of Evenor Holdings"
+                sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 420px"
+                className="w-full h-full object-cover object-[center_top] transition-transform duration-700 group-hover:scale-105"
+              />
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
             </div>
             <div className="mt-6 text-center lg:text-left">

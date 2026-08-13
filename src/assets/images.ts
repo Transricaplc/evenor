@@ -93,3 +93,16 @@ export const IMG: Record<ImageKey, string> = {
 /** Find the ImageSource matching a plain URL produced above. */
 export const sourceFor = (url: string): ImageSource | undefined =>
   Object.values(IMAGES).find((i) => i.src === url);
+
+// Leadership portrait (400/800 widths)
+import ceoA400 from "@/assets/leader-ceo-400w.avif";
+import ceoA800 from "@/assets/leader-ceo-800w.avif";
+import ceoW400 from "@/assets/leader-ceo-400w.webp";
+import ceoW800 from "@/assets/leader-ceo-800w.webp";
+
+export const CEO_IMAGE: ImageSource = {
+  src: ceoW800,
+  small: ceoW400,
+  avifSrcSet: `${ceoA400} 400w, ${ceoA800} 800w`,
+  webpSrcSet: `${ceoW400} 400w, ${ceoW800} 800w`,
+};

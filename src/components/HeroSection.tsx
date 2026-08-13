@@ -62,9 +62,17 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.6, ease: "easeOut" }}
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('${slides[i].image}')` }}
-        />
+          className="absolute inset-0"
+        >
+          <ResponsiveImage
+            image={slides[i].image}
+            alt=""
+            aria-hidden
+            priority={i === 0}
+            sizes="100vw"
+            className="w-full h-full object-cover object-center"
+          />
+        </motion.div>
       </AnimatePresence>
       <div className="absolute inset-0 bg-navy/[0.82]" aria-hidden="true" />
 

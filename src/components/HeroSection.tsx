@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Truck, Network, Brain, Droplet, Mountain, Package } from "lucide-react";
-import { IMG } from "@/assets/images";
+import { IMAGES } from "@/assets/images";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const slides = [
   {

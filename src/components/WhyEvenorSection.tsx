@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
-import { IMG } from "@/assets/images";
+import { IMAGES } from "@/assets/images";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const WhyEvenorSection = () => {
   return (
@@ -36,12 +37,12 @@ const WhyEvenorSection = () => {
         </div>
 
         <div className="relative flex items-center justify-center p-8 lg:p-20">
-          <img
-            src={IMG.boardroom}
+          <ResponsiveImage
+            image={IMAGES.boardroom}
             alt="Executive boardroom at Evenor Holdings head office overlooking the city at dusk"
-            loading="lazy"
+            sizes="(max-width: 1024px) 90vw, 520px"
             width={1920}
-            height={1088}
+            height={1440}
             className="relative w-full max-w-[520px] aspect-[4/3] object-cover"
             style={{ boxShadow: "12px 12px 0 hsl(var(--gold))" }}
           />

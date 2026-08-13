@@ -7,7 +7,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import PageProgressBar from "@/components/PageProgressBar";
 import CookieConsent from "@/components/CookieConsent";
 import PageHero from "@/components/PageHero";
-import ceoPhoto from "@/assets/leader-ceo.png";
+import { CEO_IMAGE } from "@/assets/images";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import Seo from "@/components/Seo";
 import { IMG } from "@/assets/images";
 
@@ -86,9 +87,10 @@ const Leadership = () => {
                 className="mx-auto lg:mx-0 lg:sticky lg:top-32"
               >
                 <div className="relative w-[300px] sm:w-[380px] lg:w-[440px] aspect-[4/5] overflow-hidden shadow-[0_20px_60px_-20px_rgba(11,37,69,0.5)] border-l-4 border-gold">
-                  <img
-                    src={ceoPhoto}
+                  <ResponsiveImage
+                    image={CEO_IMAGE}
                     alt="Joachim Urio, Founder & CEO of Evenor Holdings"
+                    sizes="(max-width: 640px) 300px, (max-width: 1024px) 380px, 440px"
                     className="w-full h-full object-cover object-[center_top]"
                   />
                 </div>

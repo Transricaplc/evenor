@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
-import { IMG } from "@/assets/images";
+import { IMG, IMAGES, sourceFor } from "@/assets/images";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const tabs = [
   {
@@ -182,23 +183,29 @@ const SectorDeepDive = () => {
             </div>
           </div>
           <div>
-            <img src={t.img} alt={t.h3} loading="lazy" className="w-full h-full max-h-[520px] object-cover shadow-lg" />
+            {sourceFor(t.img) ? (
+              <ResponsiveImage
+                image={sourceFor(t.img)!}
+                alt={t.h3}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="w-full h-full max-h-[520px] object-cover shadow-lg"
+              />
+            ) : (
+              <img src={t.img} alt={t.h3} loading="lazy" className="w-full h-full max-h-[520px] object-cover shadow-lg" />
+            )}
           </div>
         </div>
 
       </div>
 
       <div className="grid grid-cols-3 mt-16">
-        {[
-          IMG.corridor,
-          IMG.ict,
-          IMG.mining,
-        ].map((src, i) => (
+        {[IMAGES.corridor, IMAGES.ict, IMAGES.mining].map((img, i) => (
           <div key={i} className="overflow-hidden h-[200px] md:h-[280px]">
-            <img
-              src={src}
+            <ResponsiveImage
+              image={img}
               alt=""
-              loading="lazy"
+              aria-hidden
+              sizes="(max-width: 768px) 34vw, 33vw"
               className="w-full h-full object-cover transition-all duration-500 hover:scale-[1.03] hover:brightness-110"
             />
           </div>

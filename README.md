@@ -1,73 +1,52 @@
-# Welcome to your Lovable project
+# Evenor Holdings (Pty) Ltd — Corporate Website
 
-## Project info
+Marketing and enquiry site for Evenor Holdings, a South African multi-sector industrial and
+technology group operating across Logistics, ICT Infrastructure, Management Consulting,
+Petrochemicals and Mining Solutions in Sub-Saharan Africa.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Live: https://evenor.org
 
-## How can I edit this code?
+## Stack
 
-There are several ways of editing your application.
+- Vite 5 + React 18 + TypeScript (SWC)
+- Tailwind CSS 3 with brand design tokens (navy / gold / `gold-ink` for AA contrast on light surfaces)
+- shadcn/ui on Radix primitives, Framer Motion, Lucide icons
+- Leaflet + OpenStreetMap (CARTO dark tiles) for the operations map — lazy loaded
+- Lovable Cloud (Supabase) for the contact/enquiry pipeline
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Local development
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+bun install
+bun run dev      # http://localhost:8080
+bun run test     # vitest
+bun run build    # production build (also regenerates public/sitemap.xml)
 ```
 
-**Edit a file directly in GitHub**
+Bun is the supported package manager for this repository.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project structure
 
-**Use GitHub Codespaces**
+```
+src/
+  assets/images.ts     AVIF/WebP responsive image registry (640/1280/1920w)
+  components/          Section and shared UI components
+  data/                sectors.ts, projects.ts — the content source of truth
+  lib/contactSchema.ts Zod schema + row mapper for the enquiry form
+  pages/               Route components (all lazy loaded in App.tsx)
+scripts/
+  generate-sitemap.mjs Builds public/sitemap.xml from data/*.ts at build time
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Content updates
 
-## What technologies are used for this project?
+Sectors and projects are authored in `src/data/*.ts`. Adding a slug there automatically adds
+the route content, the homepage deep-dive tab, and the sitemap entry on the next build.
 
-This project is built with:
+## Environment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Backend configuration is injected by the hosting platform (`VITE_SUPABASE_URL`,
+`VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_SUPABASE_PROJECT_ID`). These are publishable,
+client-safe values; the `contacts` table is insert-only under Row Level Security with
+server-side validation and no public read access. Never add service-role or third-party
+secrets to this file — those belong in backend secrets.

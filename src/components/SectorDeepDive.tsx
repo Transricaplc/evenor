@@ -58,7 +58,7 @@ const tabs = [
       "Digital transformation roadmapping",
       "Tender documentation & proposal engineering",
     ],
-    img: IMG.boardroom,
+    img: IMG.corridor,
   },
   {
     key: "petro",

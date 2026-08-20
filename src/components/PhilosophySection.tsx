@@ -74,7 +74,7 @@ const PhilosophySection = () => {
         <div className="h-[2px] bg-gold w-full" />
         <div
           className="h-[320px] md:h-[480px] bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: `url(${IMG.boardroom})` }}
+          style={{ backgroundImage: `url(${IMG.corridor})` }}
           aria-hidden
         />
         <div className="h-[2px] bg-gold w-full" />

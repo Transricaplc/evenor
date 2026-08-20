@@ -176,7 +176,7 @@ export const sectors: SectorContent[] = [
     eyebrow: "Sector 03 — Management Consulting",
     title: "Strategy Built for African Complexity.",
     heroImage:
-      IMG.boardroom,
+      IMG.capetown,
     intro: [
       "African markets do not respond to generic frameworks. The political economy of infrastructure delivery, the layered decision-making architecture of state-owned enterprises, and the trust dynamics that govern public-private partnerships on this continent demand advisors who have operated inside these systems — not merely studied them.",
       "Evenor Holdings' consulting practice brings together expertise in public sector reform, regulatory strategy, investment facilitation, organisational turnaround, and digital transformation advisory. Our principals engage at Principal Secretary, Director General, and Board level — structuring interventions that create durable, measurable improvement in institutional performance.",
@@ -235,7 +235,7 @@ export const sectors: SectorContent[] = [
       outcome:
         "Roadmap adopted by portfolio Minister. Governance charter revised. Follow-on mandate secured for implementation oversight.",
       image:
-        IMG.boardroom,
+        IMG.capetown,
     },
     cta: "Commission a consulting mandate",
   },

@@ -121,7 +121,7 @@ const ContactSection = () => {
             className="hidden lg:flex relative bg-cover bg-center min-h-full border-r-4 border-gold flex-col justify-end p-10 text-white"
             style={{
               backgroundImage:
-                `url(${IMG.boardroom})`,
+                `url(${IMG.corridor})`,
             }}
           >
             <div className="absolute inset-0 bg-navy/60" />

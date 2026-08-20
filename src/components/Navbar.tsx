@@ -11,7 +11,7 @@ const links: NavLink[] = [
   { label: "PROJECTS", href: "/projects", type: "route" },
   { label: "LEADERSHIP", href: "/leadership", type: "route" },
   { label: "PARTNERSHIPS", href: "#partners", type: "hash" },
-  { label: "CONTACT", href: "#contact", type: "hash" },
+  { label: "CONTACT", href: "/contact", type: "route" },
 ];
 
 const Navbar = () => {
@@ -122,7 +122,7 @@ const Navbar = () => {
               </button>
             ))}
             <button
-              onClick={() => handleClick({ label: "CONTACT", href: "#contact", type: "hash" })}
+              onClick={() => handleClick({ label: "CONTACT", href: "/contact", type: "route" })}
               className="btn-gold !py-2.5 !px-5 !text-[11px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               Partner With Us
@@ -171,7 +171,7 @@ const Navbar = () => {
                 </button>
               ))}
               <button
-                onClick={() => handleClick({ label: "CONTACT", href: "#contact", type: "hash" })}
+                onClick={() => handleClick({ label: "CONTACT", href: "/contact", type: "route" })}
                 className="btn-gold mt-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Partner With Us

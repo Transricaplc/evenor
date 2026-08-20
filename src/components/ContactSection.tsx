@@ -1,33 +1,10 @@
 import { useState, FormEvent } from "react";
-import { z } from "zod";
 import { motion } from "framer-motion";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { IMG } from "@/assets/images";
-
-const ROUTING: Record<string, string> = {
-  General: "support@evenor.org",
-  "Sales & Quotation": "sales@evenor.org",
-  "Tender Submission": "tenders@evenor.org",
-  "Partnership Proposal": "partners@evenor.org",
-  "Investor Enquiry": "joachim@evenor.org",
-  "Executive Office": "joachim@evenor.org",
-};
-
-const schema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(120),
-  organisation: z.string().trim().max(200).optional().or(z.literal("")),
-  country: z.string().trim().max(100).optional().or(z.literal("")),
-  enquiry_type: z.string().min(1, "Please select an enquiry type"),
-  email: z.string().trim().email("Please enter a valid email").max(254),
-  phone: z.string().trim().max(40).optional().or(z.literal("")),
-  message: z
-    .string()
-    .trim()
-    .min(5, "Please share a few more words")
-    .max(5000, "Message is too long"),
-});
+import { contactSchema, toContactRow, ROUTING } from "@/lib/contactSchema";
 
 const ContactSection = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -49,7 +26,7 @@ const ContactSection = () => {
       return;
     }
 
-    const parsed = schema.safeParse({
+    const parsed = contactSchema.safeParse({
       name: fd.get("name"),
       organisation: fd.get("organisation") ?? "",
       country: fd.get("country") ?? "",
@@ -66,15 +43,7 @@ const ContactSection = () => {
     }
 
     setLoading(true);
-    const { error } = await supabase.from("contacts").insert({
-      name: parsed.data.name,
-      organisation: parsed.data.organisation || null,
-      country: parsed.data.country || null,
-      enquiry_type: parsed.data.enquiry_type,
-      email: parsed.data.email,
-      phone: parsed.data.phone || null,
-      message: parsed.data.message,
-    });
+    const { error } = await supabase.from("contacts").insert(toContactRow(parsed.data));
 
     setLoading(false);
 

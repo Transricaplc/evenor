@@ -1,5 +1,7 @@
 import { IMG } from "@/assets/images";
-import OperationsMap from "@/components/OperationsMap";
+import { Suspense, lazy } from "react";
+
+const OperationsMap = lazy(() => import("@/components/OperationsMap"));
 
 const partners = [
 
@@ -40,7 +42,19 @@ const PartnersSection = () => {
 
         <div className="mt-16 text-left">
           <p className="gold-label mb-4 text-center">Where We Operate</p>
-          <OperationsMap />
+          <Suspense
+            fallback={
+              <div
+                className="h-[380px] md:h-[560px] w-full max-w-3xl mx-auto border border-gold/30 bg-navy-deep"
+                role="status"
+                aria-live="polite"
+              >
+                <span className="sr-only">Loading operations map…</span>
+              </div>
+            }
+          >
+            <OperationsMap />
+          </Suspense>
         </div>
 
       </div>

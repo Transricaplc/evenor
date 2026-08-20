@@ -68,7 +68,7 @@ const About = () => {
           eyebrow="Who We Are"
           title="A Continental Standard, Held Without Compromise."
           breadcrumb={[{ label: "Home", href: "/" }, { label: "About" }]}
-          image={IMG.boardroom}
+          image={IMG.capetown}
         />
 
         {/* Company Overview */}
@@ -251,7 +251,7 @@ const About = () => {
         {/* Leadership Teaser */}
         <section
           className="relative py-24 md:py-32 bg-cover bg-center"
-          style={{ backgroundImage: `url(${IMG.boardroom})` }}
+          style={{ backgroundImage: `url(${IMG.corridor})` }}
         >
           <div className="absolute inset-0 bg-navy/85" />
           <div className="relative container-wide text-center max-w-3xl mx-auto text-white">

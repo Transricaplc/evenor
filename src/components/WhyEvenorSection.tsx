@@ -38,8 +38,8 @@ const WhyEvenorSection = () => {
 
         <div className="relative flex items-center justify-center p-8 lg:p-20">
           <ResponsiveImage
-            image={IMAGES.boardroom}
-            alt="Executive boardroom at Evenor Holdings head office overlooking the city at dusk"
+            image={IMAGES.capetown}
+            alt="Cape Town harbour and city skyline at dusk — Evenor Holdings head office region"
             sizes="(max-width: 1024px) 90vw, 520px"
             width={1920}
             height={1440}

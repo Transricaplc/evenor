@@ -20,12 +20,6 @@ import capeW640 from "@/assets/hero-capetown-640w.webp";
 import capeW1280 from "@/assets/hero-capetown-1280w.webp";
 import capeW1920 from "@/assets/hero-capetown-1920w.webp";
 
-import boardA640 from "@/assets/hero-boardroom-640w.avif";
-import boardA1280 from "@/assets/hero-boardroom-1280w.avif";
-import boardA1920 from "@/assets/hero-boardroom-1920w.avif";
-import boardW640 from "@/assets/hero-boardroom-640w.webp";
-import boardW1280 from "@/assets/hero-boardroom-1280w.webp";
-import boardW1920 from "@/assets/hero-boardroom-1920w.webp";
 
 import petroA640 from "@/assets/hero-petrochem-640w.avif";
 import petroA1280 from "@/assets/hero-petrochem-1280w.avif";
@@ -71,7 +65,6 @@ export const IMAGES = {
   port: set(portA640, portA1280, portA1920, portW640, portW1280, portW1920),
   ict: set(ictA640, ictA1280, ictA1920, ictW640, ictW1280, ictW1920),
   capetown: set(capeA640, capeA1280, capeA1920, capeW640, capeW1280, capeW1920),
-  boardroom: set(boardA640, boardA1280, boardA1920, boardW640, boardW1280, boardW1920),
   petrochem: set(petroA640, petroA1280, petroA1920, petroW640, petroW1280, petroW1920),
   mining: set(mineA640, mineA1280, mineA1920, mineW640, mineW1280, mineW1920),
   corridor: set(corrA640, corrA1280, corrA1920, corrW640, corrW1280, corrW1920),
@@ -84,7 +77,6 @@ export const IMG: Record<ImageKey, string> = {
   port: IMAGES.port.src,
   ict: IMAGES.ict.src,
   capetown: IMAGES.capetown.src,
-  boardroom: IMAGES.boardroom.src,
   petrochem: IMAGES.petrochem.src,
   mining: IMAGES.mining.src,
   corridor: IMAGES.corridor.src,

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Truck, Network, Brain, Droplet, Mountain, Package } from "lucide-react";
+import { Truck, Network, Brain, Droplet, Mountain, Pause, Play } from "lucide-react";
+import { usePrefersReducedMotion } from "@/hooks/use-reduced-motion";
 import { IMAGES } from "@/assets/images";
 import ResponsiveImage from "@/components/ResponsiveImage";
 
@@ -10,7 +11,7 @@ const slides = [
       IMAGES.port,
     eyebrow: "Cape Town · Johannesburg · Dar es Salaam · Nairobi",
     title: ["Building the Infrastructure", "Africa Deserves."],
-    body: "A South African-headquartered industrial and technology conglomerate delivering turnkey solutions across Logistics, ICT, Consulting, Petrochemicals, Mining and Procurement — under a single mandate:",
+    body: "A South African-headquartered industrial and technology conglomerate delivering turnkey solutions across Logistics, ICT, Consulting, Petrochemicals and Mining — with procurement executed as a supporting capability across every division, under a single mandate:",
   },
   {
     image:
@@ -34,16 +35,20 @@ const sectors = [
   { icon: Brain, label: "CONSULTING" },
   { icon: Droplet, label: "PETROCHEMICALS" },
   { icon: Mountain, label: "MINING" },
-  { icon: Package, label: "PROCUREMENT" },
 ];
 
 const HeroSection = () => {
   const [i, setI] = useState(0);
+  const reducedMotion = usePrefersReducedMotion();
+  const [paused, setPaused] = useState(false);
+
+  const autoplay = !paused && !reducedMotion;
 
   useEffect(() => {
+    if (!autoplay) return;
     const t = setInterval(() => setI((n) => (n + 1) % slides.length), 7000);
     return () => clearInterval(t);
-  }, []);
+  }, [autoplay]);
 
   const go = (h: string) =>
     document.querySelector(h)?.scrollIntoView({ behavior: "smooth" });
@@ -58,10 +63,10 @@ const HeroSection = () => {
         <motion.div
           key={i}
           aria-hidden="true"
-          initial={{ opacity: 0, scale: 1.06 }}
+          initial={reducedMotion ? { opacity: 0 } : { opacity: 0, scale: 1.06 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.6, ease: "easeOut" }}
+          transition={{ duration: reducedMotion ? 0.2 : 1.6, ease: "easeOut" }}
           className="absolute inset-0"
         >
           <ResponsiveImage
@@ -81,10 +86,10 @@ const HeroSection = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 20 }}
+            initial={reducedMotion ? { opacity: 0 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
+            exit={reducedMotion ? { opacity: 0 } : { opacity: 0, y: -12 }}
+            transition={{ duration: reducedMotion ? 0.2 : 0.9, ease: "easeOut" }}
             className="max-w-4xl text-center"
           >
             <p className="gold-label mb-8">{slides[i].eyebrow}</p>
@@ -139,6 +144,15 @@ const HeroSection = () => {
               />
             </button>
           ))}
+          <button
+            type="button"
+            onClick={() => setPaused((p) => !p)}
+            aria-pressed={paused}
+            aria-label={paused ? "Resume hero slideshow" : "Pause hero slideshow"}
+            className="ml-3 min-h-11 min-w-11 flex items-center justify-center text-white/80 hover:text-gold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+          >
+            {paused || reducedMotion ? <Play size={16} aria-hidden="true" /> : <Pause size={16} aria-hidden="true" />}
+          </button>
         </div>
       </div>
 
